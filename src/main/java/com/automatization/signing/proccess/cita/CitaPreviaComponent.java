@@ -64,6 +64,7 @@ public class CitaPreviaComponent {
             driver.findElement(
                     By.xpath("//p[contains(text(),'En este momento no hay citas disponibles.')]"));
             log.info("No Hay citas");
+            driver.close();
         } catch (NoSuchElementException noSuchElementException) {
             log.error("error", noSuchElementException);
             restTemplate.getForObject(String.format(URL_TELEGRAM,
@@ -73,7 +74,8 @@ public class CitaPreviaComponent {
             takeScreenshot(driver, "EV_CITA_DISPONIBLE", directorySreen);
         } catch (ElementClickInterceptedException e) {
             log.info("Error al intentar darle click a un elemento, cerramos el navegador: {}", e.getMessage());
+            driver.close();
         }
-        driver.close();
+
     }
 }
