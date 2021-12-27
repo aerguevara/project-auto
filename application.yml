@@ -15,3 +15,14 @@ app:
     finalizar-job: 0 30 15 * * MON-THU # finalizar jornada a las 3:30PM de lunes a jueves
   usr: areyesg # usuario de auntenticacion
   pass: Diciembre2021 # contraseña de autenticacionq
+
+person:
+  data:
+    -
+      name: EMILIO REYES GUEVARA
+      passport: C11111111
+      year-of-birth: 1993
+      mail: aerguevaasra@gmail.com
+      phone: 688246000
+      nationality: 236
+

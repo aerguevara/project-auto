@@ -1,11 +1,16 @@
 package com.automatization.signing.proccess.cita;
 
+import com.automatization.signing.AutoException;
+import com.automatization.signing.model.Person;
+import com.automatization.signing.properties.Counter;
+import com.automatization.signing.properties.PersonProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
@@ -13,10 +18,14 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+import java.text.MessageFormat;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
 import static com.automatization.signing.util.ProccessHelper.CHANNEL_COMUN;
+import static com.automatization.signing.util.ProccessHelper.CHANNEL_SPT;
 import static com.automatization.signing.util.ProccessHelper.TOKEN_BOT;
 import static com.automatization.signing.util.ProccessHelper.URL_TELEGRAM;
-import static com.automatization.signing.util.ProccessHelper.takeScreenshot;
 
 
 /**
@@ -32,50 +41,129 @@ public class CitaPreviaComponent {
     @Value("${app.directory.screen}")
     private String directorySreen;
 
+    private Counter counter;
 
-    private RestTemplate restTemplate;
 
-    public CitaPreviaComponent() {
-        restTemplate = new RestTemplate();
+    private final RestTemplate restTemplate;
+    private final PersonProperties personProperties;
+    private WebDriver driver;
+
+    public CitaPreviaComponent(PersonProperties personProperties,
+                               Counter counter) {
+        this.personProperties = personProperties;
+        this.counter = counter;
+        this.restTemplate = new RestTemplate();
+        this.driver = builderDriver();
+    }
+
+    private static WebDriver builderDriver() {
+        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--headless");
+        WebDriver driver = new ChromeDriver(options);
+        driver.manage().window().setSize(new Dimension(1440, 900));
+        return driver;
     }
 
     public void iniciarProcesoCita() {
         log.info("*****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        WebDriver driver = new ChromeDriver(options);
-        driver.manage().window().setSize(new Dimension(1440, 900));
+        personProperties.getData()
+                .stream()
+                .findFirst()
+                .ifPresent((Person person) -> {
+
+                    try {
+                        driver.navigate().to(urlCita);
+                        stepOne(driver);
+                        stepTwo(person, driver);
+                        stepThree(driver);
+                        stepFour(person, driver);
+                        counter.setSuccess(counter.getSuccess() + 1);
+                    } catch (AutoException e) {
+                        log.info("mensaje de error :  {}",
+                                e.getMessage());
+                        counter.setFail(counter.getFail() + 1);
+                    }
+
+                });
+
+
+    }
+
+    private void stepFour(Person person, WebDriver driver) {
+        Select selectSede = new Select(driver.findElement(By.id("idSede")));
+        Optional<WebElement> selected = selectSede
+                .getOptions()
+                .stream()
+                .filter(webElement -> !webElement.getText().contains("Seleccionar"))
+                .findFirst();
+        String sedeDisponible = selectSede
+                .getOptions()
+                .stream()
+                .map(WebElement::getText)
+                .filter(text -> !text.contains("Seleccionar"))
+                .collect(Collectors.joining(" - "));
+
+        restTemplate.getForObject(String.format(URL_TELEGRAM,
+                        TOKEN_BOT,
+                        CHANNEL_COMUN,
+                        MessageFormat.format("Hay citas disponibles para {0} en {1}",
+                                "ASILO - PRIMERA CITA-provincia de Madrid"
+                                , sedeDisponible)),
+                String.class);
+        selected.ifPresent((WebElement webElement) ->
+                restTemplate.getForObject(String.format(URL_TELEGRAM,
+                                TOKEN_BOT,
+                                CHANNEL_SPT,
+                                MessageFormat.format("primer sede seleccionada {0}",
+                                        webElement.getText())),
+                        String.class));
+
+
+    }
+
+    private void stepThree(WebDriver driver) {
         try {
-            driver.navigate().to(urlCita);
-            Select select = new Select(driver.findElement(By.id("tramiteGrupo[1]")));
-            select.selectByValue("4104");
-            log.info("Tramite Seleccionado");
-            driver.findElement(By.id("btnAceptar")).click();
-            driver.findElement(By.id("btnEntrar")).click();
-            driver.findElement(By.id("rdbTipoDocPas")).click();
-            driver.findElement(By.id("txtIdCitado")).sendKeys("C02370733");
-            driver.findElement(By.id("txtDesCitado")).sendKeys("JAMILETH REYES GUEVARA");
-            driver.findElement(By.id("txtAnnoCitado")).sendKeys("1992");
-            Select selectNa = new Select(driver.findElement(By.id("txtPaisNac")));
-            selectNa.selectByValue("236");
-            log.info("Campos de datos relleno");
-            driver.findElement(By.id("btnEnviar")).click();
-            driver.findElement(By.id("btnEnviar")).click();
             driver.findElement(
                     By.xpath("//p[contains(text(),'En este momento no hay citas disponibles.')]"));
-            log.info("No Hay citas");
-            driver.close();
+            throw new AutoException("No hay citas disponibles");
         } catch (NoSuchElementException noSuchElementException) {
-            log.error("error", noSuchElementException);
-            restTemplate.getForObject(String.format(URL_TELEGRAM,
-                            TOKEN_BOT,
-                            CHANNEL_COMUN, "hay citas disponibles"),
-                    String.class);
-            takeScreenshot(driver, "EV_CITA_DISPONIBLE", directorySreen);
-        } catch (ElementClickInterceptedException e) {
-            log.info("Error al intentar darle click a un elemento, cerramos el navegador: {}", e.getMessage());
-            driver.close();
+            log.info("SE ENCONTRARON CITAS DISPONIBLE");
         }
 
+    }
+
+    private void stepTwo(Person person, WebDriver driver) {
+        driver.findElement(By.id("rdbTipoDocPas")).click();
+        driver.findElement(By.id("txtIdCitado")).sendKeys(person.getPassport());
+        driver.findElement(By.id("txtDesCitado")).sendKeys(person.getName());
+        driver.findElement(By.id("txtAnnoCitado")).sendKeys(person.getYearOfBirth());
+        Select selectNa = new Select(driver.findElement(By.id("txtPaisNac")));
+        selectNa.selectByValue(person.getNationality());
+        log.info("Campos de datos relleno");
+        driver.findElement(By.id("btnEnviar")).click();
+        driver.findElement(By.id("btnEnviar")).click();
+    }
+
+    private void stepOne(WebDriver driver) {
+        Select select = new Select(driver.findElement(By.id("tramiteGrupo[1]")));
+        select.selectByValue("4104");
+        log.info("Tramite Seleccionado");
+        driver.findElement(By.id("btnAceptar")).click();
+        driver.findElement(By.id("btnEntrar")).click();
+    }
+
+    public void sendResume() {
+        restTemplate.getForObject(String.format(URL_TELEGRAM,
+                        TOKEN_BOT,
+                        CHANNEL_SPT,
+                        MessageFormat.format("Resumen del dia, en las ultimas 24 horas se abrieron {0} citas",
+                                counter.getFail())),
+                String.class);
+        resetCounter();
+    }
+
+    private void resetCounter() {
+        counter.setSuccess(0);
+        counter.setFail(0);
     }
 }
