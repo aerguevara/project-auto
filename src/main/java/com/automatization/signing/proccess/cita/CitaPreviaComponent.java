@@ -155,9 +155,12 @@ public class CitaPreviaComponent {
     public void sendResume() {
         restTemplate.getForObject(String.format(URL_TELEGRAM,
                         TOKEN_BOT,
-                        CHANNEL_SPT,
-                        MessageFormat.format("Resumen del dia, en las ultimas 24 horas se abrieron {0} citas",
-                                counter.getFail())),
+                        CHANNEL_COMUN,
+                        MessageFormat.format("¡RESUMEN DEL DIA! En las ultimas 24 horas se encontraron {0} "
+                                        .concat("citas de {1} intentos."),
+                                counter.getSuccess(),
+                                counter.getFail()
+                        )),
                 String.class);
         resetCounter();
     }

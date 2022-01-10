@@ -22,7 +22,7 @@ public final class ProccessHelper {
 
     public static final String CHANNEL_COMUN = "@cita_asilo_madrid";
     public static final String CHANNEL_SPT = "@soporte_areyesg";
-    public static final String TOKEN_BOT = "";
+    public static final String TOKEN_BOT = "836804862:AAH_UvkprYxygbXWdmGs28TtwN166hcCk8w";
     public static final String URL_TELEGRAM =
             "https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s&parse_mode=html";
 

@@ -6,6 +6,8 @@ app:
     url: C:\Desarrollo\chromedriver_2.exe # ruta del chromedriver para el control de chrome
   directory:
     screen: C:\Desarrollo\capturas\ # ruta donde se guardaran las capturas de pantalla
+  job:
+    cron: 0 0 20 * * *
   jornada:
     iniciar-job: 0 0 8 * * MON-FRI # inicia jornada de lunes a viernes a las 8:00AM
     finalizar-lunes-jueves-job: 0 30 17 * * MON-THU # finalizar jornada a las 5:30PM

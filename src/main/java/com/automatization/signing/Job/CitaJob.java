@@ -24,8 +24,7 @@ public class CitaJob {
         citaPreviaComponent.iniciarProcesoCita();
     }
 
-        @Scheduled(cron = "0 29 20 * * *")
-//    @Scheduled(fixedDelay = 90000)
+        @Scheduled(cron = "${app.job.cron}")
     private void resume() {
         log.info("***************************** ENVIANDO RESUMEN *****************************");
         citaPreviaComponent.sendResume();
