@@ -22,10 +22,7 @@ import java.text.MessageFormat;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import static com.automatization.signing.util.ProccessHelper.CHANNEL_COMUN;
-import static com.automatization.signing.util.ProccessHelper.CHANNEL_SPT;
-import static com.automatization.signing.util.ProccessHelper.TOKEN_BOT;
-import static com.automatization.signing.util.ProccessHelper.URL_TELEGRAM;
+import static com.automatization.signing.util.ProccessHelper.*;
 
 
 /**
@@ -92,11 +89,6 @@ public class CitaPreviaComponent {
 
     private void stepFour(Person person, WebDriver driver) {
         Select selectSede = new Select(driver.findElement(By.id("idSede")));
-        Optional<WebElement> selected = selectSede
-                .getOptions()
-                .stream()
-                .filter(webElement -> !webElement.getText().contains("Seleccionar"))
-                .findFirst();
         String sedeDisponible = selectSede
                 .getOptions()
                 .stream()
@@ -105,19 +97,47 @@ public class CitaPreviaComponent {
                 .collect(Collectors.joining(" - "));
 
         restTemplate.getForObject(String.format(URL_TELEGRAM,
-                        TOKEN_BOT,
-                        CHANNEL_COMUN,
-                        MessageFormat.format("Hay citas disponibles para {0} en {1}",
-                                "ASILO - PRIMERA CITA-provincia de Madrid"
-                                , sedeDisponible)),
+                TOKEN_BOT,
+                CHANNEL_PRIVATE,
+                MessageFormat.format("Hay citas disponibles para {0} en {1}",
+                        "ASILO - PRIMERA CITA-provincia de Madrid"
+                        , sedeDisponible)),
                 String.class);
-        selected.ifPresent((WebElement webElement) ->
-                restTemplate.getForObject(String.format(URL_TELEGRAM,
-                                TOKEN_BOT,
-                                CHANNEL_SPT,
-                                MessageFormat.format("primer sede seleccionada {0}",
-                                        webElement.getText())),
-                        String.class));
+
+        stepFiveBuilder(selectSede, person);
+
+
+    }
+
+    private void stepFiveBuilder(Select selectSede, Person person) {
+        log.info("*****************************INICIAMOS FASE 5 DEL PROCESO DE SOLICITUD*****************************");
+        Optional<WebElement> selected = selectSede
+                .getOptions()
+                .stream()
+                .filter(webElement -> !webElement.getText().contains("Seleccionar"))
+                .findFirst();
+        selected.ifPresent((WebElement webElement) -> {
+            restTemplate.getForObject(String.format(URL_TELEGRAM,
+                    TOKEN_BOT,
+                    CHANNEL_SPT,
+                    MessageFormat.format("primer sede seleccionada {0}",
+                            webElement.getText())),
+                    String.class);
+            selectSede.selectByVisibleText(webElement.getText());
+            driver.findElement(By.id("btnSiguiente")).click();
+            driver.findElement(By.id("txtTelefonoCitado")).sendKeys(person.getPhone());
+            driver.findElement(By.id("emailUNO")).sendKeys(person.getMail());
+            driver.findElement(By.id("emailDOS")).sendKeys(person.getMail());
+            restTemplate.getForObject(String.format(URL_TELEGRAM,
+                    TOKEN_BOT,
+                    CHANNEL_SPT,
+                    "Se ha logrado llenar la fase 5 del proceso"),
+                    String.class);
+            driver.findElement(By.id("btnSiguiente")).click();
+            log.info("IMPRIMIENDO EN LOG LA PAGINA PARA CONOCER LOS ELEMENTOS DISPONIBLES");
+            log.info(driver.getPageSource());
+
+        });
 
 
     }
@@ -155,13 +175,13 @@ public class CitaPreviaComponent {
 
     public void sendResume() {
         restTemplate.getForObject(String.format(URL_TELEGRAM,
-                        TOKEN_BOT,
-                        CHANNEL_COMUN,
-                        MessageFormat.format("¡RESUMEN DEL DIA! En las ultimas 24 horas se encontraron {0} "
-                                        .concat("citas de {1} intentos."),
-                                counter.getSuccess(),
-                                counter.getFail()
-                        )),
+                TOKEN_BOT,
+                CHANNEL_COMUN,
+                MessageFormat.format("¡RESUMEN DEL DIA! En las ultimas 24 horas se encontraron {0} "
+                                .concat("citas de {1} intentos."),
+                        counter.getSuccess(),
+                        counter.getFail()
+                )),
                 String.class);
         resetCounter();
     }

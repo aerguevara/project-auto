@@ -7,7 +7,7 @@ app:
     url: https://myworktime.vectoritcgroup.com # ruta de la web
     url-cita: https://sede.administracionespublicas.gob.es/icpplustiem/citar?p=28&locale=es
   web-driver:
-    url: C:\Desarrollo\chromedriver.exe # ruta del chromedriver para el control de chrome
+    url: C:\Desarrollo\MI_AMORCITO\chromedriver.exe # ruta del chromedriver para el control de chrome
   directory:
     screen: C:\Desarrollo\capturas\ # ruta donde se guardaran las capturas de pantalla
   job:
