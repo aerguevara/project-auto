@@ -1,9 +1,13 @@
+logging:
+  file:
+    name: auto.log
+    max-size: 10MB
 app:
   web:
     url: https://myworktime.vectoritcgroup.com # ruta de la web
     url-cita: https://sede.administracionespublicas.gob.es/icpplustiem/citar?p=28&locale=es
   web-driver:
-    url: C:\Desarrollo\chromedriver_2.exe # ruta del chromedriver para el control de chrome
+    url: C:\Desarrollo\chromedriver.exe # ruta del chromedriver para el control de chrome
   directory:
     screen: C:\Desarrollo\capturas\ # ruta donde se guardaran las capturas de pantalla
   job:

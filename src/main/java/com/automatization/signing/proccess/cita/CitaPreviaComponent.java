@@ -72,6 +72,7 @@ public class CitaPreviaComponent {
                 .ifPresent((Person person) -> {
 
                     try {
+                        driver.manage().deleteAllCookies();
                         driver.navigate().to(urlCita);
                         stepOne(driver);
                         stepTwo(person, driver);
@@ -127,7 +128,7 @@ public class CitaPreviaComponent {
                     By.xpath("//p[contains(text(),'En este momento no hay citas disponibles.')]"));
             throw new AutoException("No hay citas disponibles");
         } catch (NoSuchElementException noSuchElementException) {
-            log.info("SE ENCONTRARON CITAS DISPONIBLE");
+            log.error("SE ENCONTRARON CITAS DISPONIBLE", noSuchElementException);
         }
 
     }

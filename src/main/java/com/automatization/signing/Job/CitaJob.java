@@ -19,7 +19,7 @@ public class CitaJob {
         this.citaPreviaComponent = citaPreviaComponent;
     }
 
-    @Scheduled(fixedDelay = 60000)
+    @Scheduled(fixedDelay = 5000)
     public void initProccess() {
         citaPreviaComponent.iniciarProcesoCita();
     }
