@@ -30,4 +30,10 @@ public class CitaJob {
         citaPreviaComponent.sendResume();
     }
 
+    @Scheduled(cron = "${app.job.cron-spt}")
+    private void reporte_actividad() {
+        log.info("***************************** ENVIANDO REPORTE DE ACTIVIDAD *****************************");
+        citaPreviaComponent.sendActivityLog();
+    }
+
 }

@@ -26,6 +26,7 @@ public final class ProccessHelper {
     public static final String TOKEN_BOT = "836804862:AAH_UvkprYxygbXWdmGs28TtwN166hcCk8w";
     public static final String URL_TELEGRAM =
             "https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s&parse_mode=html";
+    public static final String CHAT_ID_PERSONAL = "795430222";
 
     private ProccessHelper() {
         throw new IllegalStateException("Utility class");
@@ -53,16 +54,11 @@ public final class ProccessHelper {
         }
     }
 
-    public static void takeScreenshot(WebDriver webDriver, String nameImage, String directory) {
+    public static File takeScreenshot(WebDriver webDriver) {
         pensarUnPoco();
         TakesScreenshot screenshot = (TakesScreenshot) webDriver;
-        File file = screenshot.getScreenshotAs(OutputType.FILE);
-        String path = directory.concat(nameImage).concat(".png");
-        try {
-            FileUtils.copyFile(file, new File(path));
-        } catch (IOException e) {
-            log.info("ERROR AL GUARDAR LA CAPTURA DEL NAVEGADOR");
-        }
+        return screenshot.getScreenshotAs(OutputType.FILE);
+
     }
 
 }

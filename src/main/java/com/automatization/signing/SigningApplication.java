@@ -19,16 +19,10 @@ public class SigningApplication {
 
     @Value("${app.web-driver.url}")
     private String webDriver;
-    private final RestTemplate restTemplate = new RestTemplate();
 
 
     @PostConstruct
     public void init() {
-        restTemplate.getForObject(String.format(URL_TELEGRAM,
-                TOKEN_BOT,
-                CHANNEL_PRIVATE,
-                "¡DonnaBot iniciada!"),
-                String.class);
         System.setProperty("webdriver.chrome.driver", webDriver);
     }
 

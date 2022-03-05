@@ -1,13 +1,14 @@
 package com.automatization.signing.proccess.cita;
 
 import com.automatization.signing.AutoException;
+import com.automatization.signing.Job.TelegramBotComponent;
 import com.automatization.signing.model.Person;
 import com.automatization.signing.properties.Counter;
 import com.automatization.signing.properties.PersonProperties;
+import com.automatization.signing.util.ProccessHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,13 +45,16 @@ public class CitaPreviaComponent {
     private final RestTemplate restTemplate;
     private final PersonProperties personProperties;
     private WebDriver driver;
+    private final TelegramBotComponent telegramBotComponent;
 
     public CitaPreviaComponent(PersonProperties personProperties,
-                               Counter counter) {
+                               Counter counter,
+                               TelegramBotComponent telegramBotComponent) {
         this.personProperties = personProperties;
         this.counter = counter;
         this.restTemplate = new RestTemplate();
         this.driver = builderDriver();
+        this.telegramBotComponent = telegramBotComponent;
     }
 
     private static WebDriver builderDriver() {
@@ -110,7 +114,9 @@ public class CitaPreviaComponent {
     }
 
     private void stepFiveBuilder(Select selectSede, Person person) {
+        telegramBotComponent.sendPhoto(ProccessHelper.takeScreenshot(driver), CHAT_ID_PERSONAL);
         log.info("*****************************INICIAMOS FASE 5 DEL PROCESO DE SOLICITUD*****************************");
+        log.info(driver.getPageSource());
         Optional<WebElement> selected = selectSede
                 .getOptions()
                 .stream()
@@ -176,7 +182,7 @@ public class CitaPreviaComponent {
     public void sendResume() {
         restTemplate.getForObject(String.format(URL_TELEGRAM,
                 TOKEN_BOT,
-                CHANNEL_COMUN,
+                CHANNEL_PRIVATE,
                 MessageFormat.format("¡RESUMEN DEL DIA! En las ultimas 24 horas se encontraron {0} "
                                 .concat("citas de {1} intentos."),
                         counter.getSuccess(),
@@ -184,6 +190,16 @@ public class CitaPreviaComponent {
                 )),
                 String.class);
         resetCounter();
+    }
+
+    public void sendActivityLog() {
+        restTemplate.getForObject(String.format(URL_TELEGRAM,
+                TOKEN_BOT,
+                CHANNEL_SPT,
+                MessageFormat.format("Reporte de actividad, intentos fallidos:  {0} ",
+                        counter.getFail()
+                )),
+                String.class);
     }
 
     private void resetCounter() {

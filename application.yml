@@ -1,3 +1,9 @@
+spring:
+  data:
+    mongodb:
+      user: produser
+      password: pass1234
+      uri: mongodb://192.168.1.145:27017/production
 logging:
   file:
     name: auto.log
@@ -12,6 +18,7 @@ app:
     screen: C:\Desarrollo\capturas\ # ruta donde se guardaran las capturas de pantalla
   job:
     cron: 0 0 20 * * *
+    cron-spt: "0 0 */1 * * *"
   jornada:
     iniciar-job: 0 0 8 * * MON-FRI # inicia jornada de lunes a viernes a las 8:00AM
     finalizar-lunes-jueves-job: 0 30 17 * * MON-THU # finalizar jornada a las 5:30PM
@@ -25,10 +32,10 @@ app:
 person:
   data:
     -
-      name: EMILIO REYES GUEVARA
+      name: AAAAAA AAAAA AAAAAAA
       passport: C11111111
       year-of-birth: 1993
-      mail: aerguevaasra@gmail.com
-      phone: 688246000
+      mail: aaaaaaaa@aaaaa.com
+      phone: 666666666
       nationality: 236
 
