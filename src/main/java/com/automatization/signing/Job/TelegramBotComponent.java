@@ -17,7 +17,7 @@ import java.io.File;
 @Slf4j
 public class TelegramBotComponent extends TelegramLongPollingBot {
 
-    private static final String TOKEN_NIMBUS_BOT = "5239816618:AAHI-gJ9b4MJCy2xFZA1BTGsesNJP6aIvAg";
+    private static final String TOKEN_NIMBUS_BOT = "";
 
     private final ChatsService chatsService;
 
