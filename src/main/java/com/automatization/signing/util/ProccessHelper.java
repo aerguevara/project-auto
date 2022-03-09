@@ -1,7 +1,7 @@
 package com.automatization.signing.util;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.File;
-import java.io.IOException;
+
 
 /**
  * @author Teams VectorITCGroup
@@ -19,14 +19,6 @@ import java.io.IOException;
  */
 @Slf4j
 public final class ProccessHelper {
-
-    public static final String CHANNEL_COMUN = "@cita_asilo_madrid";
-    public static final String CHANNEL_SPT = "-1001652227932";
-    public static final String CHANNEL_PRIVATE = "-1001775645268";
-    public static final String TOKEN_BOT = "";
-    public static final String URL_TELEGRAM =
-            "https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s&parse_mode=html";
-    public static final String CHAT_ID_PERSONAL = "795430222";
 
     private ProccessHelper() {
         throw new IllegalStateException("Utility class");
