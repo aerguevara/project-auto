@@ -34,8 +34,6 @@ public class CitaPreviaComponent {
     private final BotService botService;
     @Value("${app.web.url-cita}")
     private String urlCita;
-    @Value("${app.directory.screen}")
-    private String directorySreen;
     private Counter counter;
     private WebDriver driver;
 
@@ -89,9 +87,9 @@ public class CitaPreviaComponent {
                 .stream()
                 .map(WebElement::getText)
                 .filter(text -> !text.contains("Seleccionar"))
-                .collect(Collectors.joining(" \\n- "));
+                .collect(Collectors.joining("\n- ", "\n- ", ""));
         botService.sendNotification(
-                MessageFormat.format("<b>Hay citas disponibles para {0}</b> en: \\n{1}",
+                MessageFormat.format("<b>Hay citas disponibles para {0}</b> en: \n{1}",
                         "ASILO - PRIMERA CITA-provincia de Madrid"
                         , sedeDisponible));
         stepFiveBuilder(selectSede, person);
