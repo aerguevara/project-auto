@@ -2,5 +2,5 @@ package com.automatization.signing.service;
 
 public interface BotService {
 
-    void sendNotification(String data, boolean withDelay);
+    void sendNotification(String data, boolean onlyAdmin);
 }

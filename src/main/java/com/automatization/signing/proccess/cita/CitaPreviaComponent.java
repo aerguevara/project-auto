@@ -6,11 +6,7 @@ import com.automatization.signing.properties.Counter;
 import com.automatization.signing.properties.PersonProperties;
 import com.automatization.signing.service.BotService;
 import lombok.extern.slf4j.Slf4j;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
@@ -48,9 +44,9 @@ public class CitaPreviaComponent {
 
     private static WebDriver builderDriver() {
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--headless");
+        options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
-        driver.manage().window().setSize(new Dimension(1440, 900));
+        driver.manage().window().setSize(new Dimension(1500, 1000));
         return driver;
     }
 
@@ -60,7 +56,6 @@ public class CitaPreviaComponent {
                 .stream()
                 .findFirst()
                 .ifPresent((Person person) -> {
-
                     try {
                         driver.manage().deleteAllCookies();
                         driver.navigate().to(urlCita);
@@ -70,9 +65,15 @@ public class CitaPreviaComponent {
                         stepFour(person, driver);
                         counter.setSuccess(counter.getSuccess() + 1);
                     } catch (AutoException e) {
-                        log.info("mensaje de error :  {}",
+                        log.info("MENSAJE DE ERROR :  {}",
                                 e.getMessage());
                         counter.setFail(counter.getFail() + 1);
+                    } catch (NoSuchElementException | ElementClickInterceptedException e) {
+                        log.info("OCURRIO UN ERROR AL LLENAR LOS DATOS");
+                        botService.sendNotification(
+                                MessageFormat.format("OCURRIO UN ERROR AL LLENAR LOS DATOS {}",
+                                        e.getMessage()),
+                                true);
                     }
 
                 });
@@ -92,7 +93,7 @@ public class CitaPreviaComponent {
                 MessageFormat.format("<b>Hay citas disponibles para {0}</b> en: \n{1}",
                         "ASILO - PRIMERA CITA-provincia de Madrid"
                         , sedeDisponible),
-                true);
+                false);
         stepFiveBuilder(selectSede, person);
     }
 
@@ -156,7 +157,7 @@ public class CitaPreviaComponent {
                                 .concat("citas de {1} intentos."),
                         counter.getSuccess(),
                         counter.getFail()
-                ), false);
+                ), true);
         resetCounter();
     }
 
