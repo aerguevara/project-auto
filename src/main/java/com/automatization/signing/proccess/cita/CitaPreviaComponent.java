@@ -65,7 +65,6 @@ public class CitaPreviaComponent {
                         stepTwo(person, driver);
                         stepThree(driver);
                         stepFour(person, driver);
-                        counter.setSuccess(counter.getSuccess() + 1);
                     } catch (AutoException e) {
                         log.info("MENSAJE DE ERROR :  {}",
                                 e.getMessage());
@@ -129,6 +128,7 @@ public class CitaPreviaComponent {
             throw new AutoException("No hay citas disponibles");
         } catch (NoSuchElementException noSuchElementException) {
             log.error("SE ENCONTRARON CITAS DISPONIBLE", noSuchElementException);
+            counter.setSuccess(counter.getSuccess() + 1);
         }
 
     }
