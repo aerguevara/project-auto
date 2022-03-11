@@ -48,7 +48,7 @@ public class CitaPreviaComponent {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
-        driver.manage().window().setSize(new Dimension(1500, 1000));
+        driver.manage().window().setSize(new Dimension(1700, 1200));
         return driver;
     }
 
