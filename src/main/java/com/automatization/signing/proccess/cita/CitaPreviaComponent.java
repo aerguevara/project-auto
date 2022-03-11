@@ -17,6 +17,8 @@ import java.text.MessageFormat;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import static com.automatization.signing.util.ProccessHelper.*;
+
 
 /**
  * @author Anyelo Reyes Guevara
@@ -164,5 +166,12 @@ public class CitaPreviaComponent {
     private void resetCounter() {
         counter.setSuccess(0);
         counter.setFail(0);
+    }
+
+    public void sendActivityLog() {
+        botService.sendNotification(
+                MessageFormat.format("¡REPORTE DE ACTIVIDAD, JOB 1! INTENTOS REALIZADOS {0} ",
+                        counter.getFail()
+                ), true);
     }
 }
