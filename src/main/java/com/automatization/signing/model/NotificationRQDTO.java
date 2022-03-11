@@ -12,4 +12,5 @@ import lombok.extern.jackson.Jacksonized;
 public class NotificationRQDTO {
     private String jobId;
     private String message;
+    private boolean withDelay;
 }

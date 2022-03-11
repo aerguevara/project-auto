@@ -91,7 +91,8 @@ public class CitaPreviaComponent {
         botService.sendNotification(
                 MessageFormat.format("<b>Hay citas disponibles para {0}</b> en: \n{1}",
                         "ASILO - PRIMERA CITA-provincia de Madrid"
-                        , sedeDisponible));
+                        , sedeDisponible),
+                true);
         stepFiveBuilder(selectSede, person);
     }
 
@@ -155,7 +156,7 @@ public class CitaPreviaComponent {
                                 .concat("citas de {1} intentos."),
                         counter.getSuccess(),
                         counter.getFail()
-                ));
+                ), false);
         resetCounter();
     }
 

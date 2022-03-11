@@ -22,10 +22,11 @@ public class BotServiceImpl implements BotService {
 
     @Override
     @Async
-    public void sendNotification(String data) {
+    public void sendNotification(String data, boolean withDelay) {
         restTemplate.postForObject(urlBot, NotificationRQDTO.builder()
                         .jobId(jobId)
                         .message(data)
+                        .withDelay(withDelay)
                         .build(),
                 void.class);
     }
