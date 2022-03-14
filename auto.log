@@ -1,707 +1,79 @@
-2022-03-09 21:20:24.645  INFO 21024 --- [main] c.a.signing.SigningApplication           : Starting SigningApplication using Java 15.0.2 on LAPTOP-OKOUJH4I with PID 21024 (C:\Desarrollo\MI_AMORCITO\project-auto\target\classes started by cshar in C:\Desarrollo\MI_AMORCITO\project-auto)
-2022-03-09 21:20:24.691  INFO 21024 --- [main] c.a.signing.SigningApplication           : No active profile set, falling back to 1 default profile: "default"
-2022-03-09 21:20:25.713  INFO 21024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2022-03-09 21:20:25.739  INFO 21024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 MongoDB repository interfaces.
-2022-03-09 21:20:26.650  INFO 21024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-03-09 21:20:26.666  INFO 21024 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-09 21:20:26.667  INFO 21024 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-09 21:20:26.859  INFO 21024 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-09 21:20:26.859  INFO 21024 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2062 ms
-2022-03-09 21:20:26.981  WARN 21024 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signingApplication': Invocation of init method failed; nested exception is java.lang.NullPointerException: Cannot invoke "com.automatization.signing.service.BotService.sendNotification(String)" because "this.botService" is null
-2022-03-09 21:20:26.986  INFO 21024 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-03-09 21:20:27.010  INFO 21024 --- [main] ConditionEvaluationReportLoggingListener : 
+2022-03-15 00:00:00.007  INFO 24504 --- [scheduling-1] com.automatization.signing.Job.CitaJob   : ***************************** ENVIANDO REPORTE DE ACTIVIDAD *****************************
+2022-03-15 00:00:02.248 ERROR 24504 --- [task-1] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.automatization.signing.service.BotServiceImpl.sendNotification(java.lang.String,boolean)
 
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-03-09 21:20:27.053 ERROR 21024 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signingApplication': Invocation of init method failed; nested exception is java.lang.NullPointerException: Cannot invoke "com.automatization.signing.service.BotService.sendNotification(String)" because "this.botService" is null
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
-	at com.automatization.signing.SigningApplication.main(SigningApplication.java:49) ~[classes/:na]
-Caused by: java.lang.NullPointerException: Cannot invoke "com.automatization.signing.service.BotService.sendNotification(String)" because "this.botService" is null
-	at com.automatization.signing.SigningApplication.init(SigningApplication.java:42) ~[classes/:na]
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:5151/api/v1/notification": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.automatization.signing.service.BotServiceImpl.sendNotification(BotServiceImpl.java:26) ~[classes/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 18 common frames omitted
-
-2022-03-09 21:21:43.700  INFO 3672 --- [main] c.a.signing.SigningApplication           : Starting SigningApplication using Java 15.0.2 on LAPTOP-OKOUJH4I with PID 3672 (C:\Desarrollo\MI_AMORCITO\project-auto\target\classes started by cshar in C:\Desarrollo\MI_AMORCITO\project-auto)
-2022-03-09 21:21:43.705  INFO 3672 --- [main] c.a.signing.SigningApplication           : No active profile set, falling back to 1 default profile: "default"
-2022-03-09 21:21:44.690  INFO 3672 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2022-03-09 21:21:44.712  INFO 3672 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 MongoDB repository interfaces.
-2022-03-09 21:21:45.643  INFO 3672 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-03-09 21:21:45.656  INFO 3672 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-09 21:21:45.657  INFO 3672 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-09 21:21:45.896  INFO 3672 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-09 21:21:45.897  INFO 3672 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2106 ms
-2022-03-09 21:21:48.501  INFO 3672 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
-2022-03-09 21:21:48.662  WARN 3672 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'citaJob' defined in file [C:\Desarrollo\MI_AMORCITO\project-auto\target\classes\com\automatization\signing\Job\CitaJob.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-2022-03-09 21:21:48.670  INFO 3672 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-03-09 21:21:48.696  INFO 3672 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-03-09 21:21:48.723 ERROR 3672 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'citaJob' defined in file [C:\Desarrollo\MI_AMORCITO\project-auto\target\classes\com\automatization\signing\Job\CitaJob.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
-	at com.automatization.signing.SigningApplication.main(SigningApplication.java:50) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 19 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1330) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 31 common frames omitted
-
-2022-03-09 21:22:40.439  INFO 25844 --- [main] c.a.signing.SigningApplication           : Starting SigningApplication using Java 15.0.2 on LAPTOP-OKOUJH4I with PID 25844 (C:\Desarrollo\MI_AMORCITO\project-auto\target\classes started by cshar in C:\Desarrollo\MI_AMORCITO\project-auto)
-2022-03-09 21:22:40.445  INFO 25844 --- [main] c.a.signing.SigningApplication           : No active profile set, falling back to 1 default profile: "default"
-2022-03-09 21:22:41.499  INFO 25844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2022-03-09 21:22:41.523  INFO 25844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 MongoDB repository interfaces.
-2022-03-09 21:22:42.365  INFO 25844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-03-09 21:22:42.398  INFO 25844 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-09 21:22:42.399  INFO 25844 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-09 21:22:42.619  INFO 25844 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-09 21:22:42.620  INFO 25844 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2065 ms
-2022-03-09 21:22:45.168  INFO 25844 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
-2022-03-09 21:22:45.344  WARN 25844 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'citaJob' defined in file [C:\Desarrollo\MI_AMORCITO\project-auto\target\classes\com\automatization\signing\Job\CitaJob.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-2022-03-09 21:22:45.350  INFO 25844 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-03-09 21:22:45.372  INFO 25844 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-03-09 21:22:45.419 ERROR 25844 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'citaJob' defined in file [C:\Desarrollo\MI_AMORCITO\project-auto\target\classes\com\automatization\signing\Job\CitaJob.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
-	at com.automatization.signing.SigningApplication.main(SigningApplication.java:50) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 19 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1330) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 31 common frames omitted
-
-2022-03-09 21:24:27.956  INFO 27448 --- [main] c.a.signing.SigningApplication           : Starting SigningApplication using Java 15.0.2 on LAPTOP-OKOUJH4I with PID 27448 (C:\Desarrollo\MI_AMORCITO\project-auto\target\classes started by cshar in C:\Desarrollo\MI_AMORCITO\project-auto)
-2022-03-09 21:24:27.964  INFO 27448 --- [main] c.a.signing.SigningApplication           : No active profile set, falling back to 1 default profile: "default"
-2022-03-09 21:24:28.887  INFO 27448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2022-03-09 21:24:28.907  INFO 27448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
-2022-03-09 21:24:29.735  INFO 27448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-03-09 21:24:29.767  INFO 27448 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-09 21:24:29.767  INFO 27448 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-09 21:24:29.957  INFO 27448 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-09 21:24:29.958  INFO 27448 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1870 ms
-2022-03-09 21:24:32.405  INFO 27448 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
-2022-03-09 21:24:32.582  WARN 27448 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'citaJob' defined in file [C:\Desarrollo\MI_AMORCITO\project-auto\target\classes\com\automatization\signing\Job\CitaJob.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-2022-03-09 21:24:32.588  INFO 27448 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-03-09 21:24:32.606  INFO 27448 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-03-09 21:24:32.634 ERROR 27448 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'citaJob' defined in file [C:\Desarrollo\MI_AMORCITO\project-auto\target\classes\com\automatization\signing\Job\CitaJob.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
-	at com.automatization.signing.SigningApplication.main(SigningApplication.java:50) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 19 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1330) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 31 common frames omitted
-
-2022-03-09 21:25:00.757  INFO 25096 --- [main] c.a.signing.SigningApplication           : Starting SigningApplication using Java 15.0.2 on LAPTOP-OKOUJH4I with PID 25096 (C:\Desarrollo\MI_AMORCITO\project-auto\target\classes started by cshar in C:\Desarrollo\MI_AMORCITO\project-auto)
-2022-03-09 21:25:00.765  INFO 25096 --- [main] c.a.signing.SigningApplication           : No active profile set, falling back to 1 default profile: "default"
-2022-03-09 21:25:01.767  INFO 25096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2022-03-09 21:25:01.790  INFO 25096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 MongoDB repository interfaces.
-2022-03-09 21:25:02.761  INFO 25096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-03-09 21:25:02.779  INFO 25096 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-09 21:25:02.780  INFO 25096 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-09 21:25:02.984  INFO 25096 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-09 21:25:02.985  INFO 25096 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2118 ms
-2022-03-09 21:25:05.596  INFO 25096 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
-2022-03-09 21:25:05.766  WARN 25096 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'citaJob' defined in file [C:\Desarrollo\MI_AMORCITO\project-auto\target\classes\com\automatization\signing\Job\CitaJob.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-2022-03-09 21:25:05.777  INFO 25096 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-03-09 21:25:05.795  INFO 25096 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-03-09 21:25:05.824 ERROR 25096 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'citaJob' defined in file [C:\Desarrollo\MI_AMORCITO\project-auto\target\classes\com\automatization\signing\Job\CitaJob.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
-	at com.automatization.signing.SigningApplication.main(SigningApplication.java:50) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 19 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1330) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 31 common frames omitted
-
-2022-03-09 21:25:37.966  INFO 28124 --- [main] c.a.signing.SigningApplication           : Starting SigningApplication using Java 15.0.2 on LAPTOP-OKOUJH4I with PID 28124 (C:\Desarrollo\MI_AMORCITO\project-auto\target\classes started by cshar in C:\Desarrollo\MI_AMORCITO\project-auto)
-2022-03-09 21:25:37.971  INFO 28124 --- [main] c.a.signing.SigningApplication           : No active profile set, falling back to 1 default profile: "default"
-2022-03-09 21:25:38.947  INFO 28124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2022-03-09 21:25:38.965  INFO 28124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
-2022-03-09 21:25:39.877  INFO 28124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-03-09 21:25:39.907  INFO 28124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-09 21:25:39.907  INFO 28124 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-09 21:25:40.125  INFO 28124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-09 21:25:40.126  INFO 28124 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2054 ms
-2022-03-09 21:25:42.951  INFO 28124 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
-2022-03-09 21:25:43.118  WARN 28124 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'citaJob' defined in file [C:\Desarrollo\MI_AMORCITO\project-auto\target\classes\com\automatization\signing\Job\CitaJob.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-2022-03-09 21:25:43.123  INFO 28124 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-03-09 21:25:43.137  INFO 28124 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-03-09 21:25:43.179 ERROR 28124 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'citaJob' defined in file [C:\Desarrollo\MI_AMORCITO\project-auto\target\classes\com\automatization\signing\Job\CitaJob.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
-	at com.automatization.signing.SigningApplication.main(SigningApplication.java:50) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 19 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1330) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 31 common frames omitted
-
-2022-03-09 21:26:06.618  INFO 2136 --- [main] c.a.signing.SigningApplication           : Starting SigningApplication using Java 15.0.2 on LAPTOP-OKOUJH4I with PID 2136 (C:\Desarrollo\MI_AMORCITO\project-auto\target\classes started by cshar in C:\Desarrollo\MI_AMORCITO\project-auto)
-2022-03-09 21:26:06.623  INFO 2136 --- [main] c.a.signing.SigningApplication           : No active profile set, falling back to 1 default profile: "default"
-2022-03-09 21:26:07.617  INFO 2136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2022-03-09 21:26:07.640  INFO 2136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 MongoDB repository interfaces.
-2022-03-09 21:26:08.641  INFO 2136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-03-09 21:26:08.658  INFO 2136 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-09 21:26:08.659  INFO 2136 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-09 21:26:08.866  INFO 2136 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-09 21:26:08.867  INFO 2136 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2163 ms
-2022-03-09 21:26:11.410  INFO 2136 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
-2022-03-09 21:26:11.621  WARN 2136 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'citaJob' defined in file [C:\Desarrollo\MI_AMORCITO\project-auto\target\classes\com\automatization\signing\Job\CitaJob.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-2022-03-09 21:26:11.626  INFO 2136 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-03-09 21:26:11.652  INFO 2136 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-03-09 21:26:11.694 ERROR 2136 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'citaJob' defined in file [C:\Desarrollo\MI_AMORCITO\project-auto\target\classes\com\automatization\signing\Job\CitaJob.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
-	at com.automatization.signing.SigningApplication.main(SigningApplication.java:50) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 19 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1330) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 31 common frames omitted
-
-2022-03-09 21:26:24.563  INFO 21656 --- [main] c.a.signing.SigningApplication           : Starting SigningApplication using Java 15.0.2 on LAPTOP-OKOUJH4I with PID 21656 (C:\Desarrollo\MI_AMORCITO\project-auto\target\classes started by cshar in C:\Desarrollo\MI_AMORCITO\project-auto)
-2022-03-09 21:26:24.569  INFO 21656 --- [main] c.a.signing.SigningApplication           : No active profile set, falling back to 1 default profile: "default"
-2022-03-09 21:26:25.456  INFO 21656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2022-03-09 21:26:25.474  INFO 21656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
-2022-03-09 21:26:26.321  INFO 21656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-03-09 21:26:26.354  INFO 21656 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-09 21:26:26.354  INFO 21656 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-09 21:26:26.536  INFO 21656 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-09 21:26:26.540  INFO 21656 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1887 ms
-2022-03-09 21:26:29.190  INFO 21656 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
-2022-03-09 21:26:29.370  WARN 21656 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'citaJob' defined in file [C:\Desarrollo\MI_AMORCITO\project-auto\target\classes\com\automatization\signing\Job\CitaJob.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-2022-03-09 21:26:29.374  INFO 21656 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-03-09 21:26:29.399  INFO 21656 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-03-09 21:26:29.485 ERROR 21656 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'citaJob' defined in file [C:\Desarrollo\MI_AMORCITO\project-auto\target\classes\com\automatization\signing\Job\CitaJob.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
-	at com.automatization.signing.SigningApplication.main(SigningApplication.java:50) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'citaPreviaComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 19 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'app.directory.screen' in value "${app.directory.screen}"
-	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.16.jar:5.3.16]
-	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1330) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 31 common frames omitted
-
-2022-03-09 21:27:38.278  INFO 26608 --- [main] c.a.signing.SigningApplication           : Starting SigningApplication using Java 15.0.2 on LAPTOP-OKOUJH4I with PID 26608 (C:\Desarrollo\MI_AMORCITO\project-auto\target\classes started by cshar in C:\Desarrollo\MI_AMORCITO\project-auto)
-2022-03-09 21:27:38.285  INFO 26608 --- [main] c.a.signing.SigningApplication           : No active profile set, falling back to 1 default profile: "default"
-2022-03-09 21:27:39.367  INFO 26608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2022-03-09 21:27:39.393  INFO 26608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 MongoDB repository interfaces.
-2022-03-09 21:27:40.345  INFO 26608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-03-09 21:27:40.370  INFO 26608 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-09 21:27:40.370  INFO 26608 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-09 21:27:40.577  INFO 26608 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-09 21:27:40.578  INFO 26608 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2165 ms
-2022-03-09 21:27:43.256  INFO 26608 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
-2022-03-09 21:27:44.257  INFO 26608 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
-2022-03-09 21:27:44.751  INFO 26608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-03-09 21:27:44.769  INFO 26608 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:27:44.776  INFO 26608 --- [main] c.a.signing.SigningApplication           : Started SigningApplication in 7.453 seconds (JVM running for 8.526)
-2022-03-09 21:27:46.388  INFO 26608 --- [cluster-ClusterId{value='62290dc0b989b10798dc1796', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
-
-com.mongodb.MongoSocketOpenException: Exception opening socket
-	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152) ~[mongodb-driver-core-4.4.2.jar:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
-Caused by: java.net.ConnectException: Connection refused: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:574) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:563) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
 	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
-	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65) ~[mongodb-driver-core-4.4.2.jar:na]
-	... 4 common frames omitted
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	... 16 common frames omitted
 
-2022-03-09 21:27:46.817  INFO 26608 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:27:53.561  INFO 26608 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:28:01.531  INFO 26608 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:28:06.539  INFO 26608 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:28:38.239  INFO 30712 --- [main] c.a.signing.SigningApplication           : Starting SigningApplication using Java 15.0.2 on LAPTOP-OKOUJH4I with PID 30712 (C:\Desarrollo\MI_AMORCITO\project-auto\target\classes started by cshar in C:\Desarrollo\MI_AMORCITO\project-auto)
-2022-03-09 21:28:38.245  INFO 30712 --- [main] c.a.signing.SigningApplication           : No active profile set, falling back to 1 default profile: "default"
-2022-03-09 21:28:39.173  INFO 30712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2022-03-09 21:28:39.193  INFO 30712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 MongoDB repository interfaces.
-2022-03-09 21:28:40.128  INFO 30712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-03-09 21:28:40.156  INFO 30712 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-09 21:28:40.156  INFO 30712 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-09 21:28:40.385  INFO 30712 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-09 21:28:40.387  INFO 30712 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2057 ms
-2022-03-09 21:28:42.788  INFO 30712 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
-2022-03-09 21:28:43.642  INFO 30712 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
-2022-03-09 21:28:44.115  INFO 30712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-03-09 21:28:44.138  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:28:44.145  INFO 30712 --- [main] c.a.signing.SigningApplication           : Started SigningApplication in 6.943 seconds (JVM running for 8.228)
-2022-03-09 21:28:45.590  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:28:45.777  INFO 30712 --- [cluster-ClusterId{value='62290dfb5f9acb503ae27a33', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+2022-03-15 00:00:12.471  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 00:00:13.670  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 00:00:14.654  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 00:00:15.263  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 00:00:35.306  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 00:00:36.551  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 00:00:37.509  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 00:00:38.124  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 00:00:58.151  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 00:00:59.382  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 00:01:00.270  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 00:01:00.878  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 00:01:20.908  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 00:01:22.144  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 00:01:23.014  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 00:01:23.598  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 00:01:43.621  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 00:01:44.823  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 00:01:45.663  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 00:01:46.236  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 00:02:06.265  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 00:02:07.021  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 00:02:07.097 ERROR 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : OCURRIO UN ERROR AL LLENAR LOS DATOS
 
-com.mongodb.MongoSocketOpenException: Exception opening socket
-	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152) ~[mongodb-driver-core-4.4.2.jar:na]
-	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
-Caused by: java.net.ConnectException: Connection refused: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
-	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65) ~[mongodb-driver-core-4.4.2.jar:na]
-	... 4 common frames omitted
-
-2022-03-09 21:28:47.373  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:28:48.340  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:28:53.356  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:28:54.691  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:28:55.777  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:28:56.396  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:29:01.411  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:29:02.817  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:29:03.857  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:29:04.620  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:29:09.621  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:29:14.110  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:29:15.156  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:29:19.140  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:29:24.155  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:29:26.239  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:29:27.389  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:29:27.996  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:29:33.011  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:29:34.275  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:29:35.547  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:29:36.186  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:29:41.203  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:29:43.329  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:29:44.514  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:29:45.144  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:29:50.160  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:29:55.081  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:29:56.088  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:29:56.695  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:30:01.712  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:30:03.049  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:30:07.275  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:30:08.216  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:30:13.220  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:30:14.809  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:30:15.871  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:30:16.556  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:30:21.560  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:30:23.111  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:30:24.203  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:30:24.831  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:30:29.833  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:30:32.046  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:30:33.140  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:30:33.786  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:30:38.802  INFO 30712 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:30:47.477  INFO 27684 --- [main] c.a.signing.SigningApplication           : Starting SigningApplication using Java 15.0.2 on LAPTOP-OKOUJH4I with PID 27684 (C:\Desarrollo\MI_AMORCITO\project-auto\target\classes started by cshar in C:\Desarrollo\MI_AMORCITO\project-auto)
-2022-03-09 21:30:47.482  INFO 27684 --- [main] c.a.signing.SigningApplication           : No active profile set, falling back to 1 default profile: "default"
-2022-03-09 21:30:48.588  INFO 27684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2022-03-09 21:30:48.615  INFO 27684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 MongoDB repository interfaces.
-2022-03-09 21:30:49.514  INFO 27684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-03-09 21:30:49.542  INFO 27684 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-09 21:30:49.543  INFO 27684 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-09 21:30:49.753  INFO 27684 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-09 21:30:49.755  INFO 27684 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2191 ms
-2022-03-09 21:30:51.979  INFO 27684 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
-2022-03-09 21:30:52.819  INFO 27684 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
-2022-03-09 21:30:53.353  INFO 27684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-03-09 21:30:53.372  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:30:53.379  INFO 27684 --- [main] c.a.signing.SigningApplication           : Started SigningApplication in 6.721 seconds (JVM running for 7.632)
-2022-03-09 21:30:55.020  INFO 27684 --- [cluster-ClusterId{value='62290e7cc49b9543f4ac9b6c', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
-
-com.mongodb.MongoSocketOpenException: Exception opening socket
-	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152) ~[mongodb-driver-core-4.4.2.jar:na]
-	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
-Caused by: java.net.ConnectException: Connection refused: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
-	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65) ~[mongodb-driver-core-4.4.2.jar:na]
-	... 4 common frames omitted
-
-2022-03-09 21:30:55.589  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:30:59.174  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:30:59.812  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:31:04.828  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:31:06.818  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:31:09.072  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:31:09.838  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:31:14.849  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:31:16.412  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:31:17.469  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:31:18.109  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:31:23.122  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:31:32.877  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:31:34.045  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
-2022-03-09 21:31:34.819  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : mensaje de error :  No hay citas disponibles
-2022-03-09 21:31:39.823  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:31:43.331  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
-2022-03-09 21:31:43.499 ERROR 27684 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
-
-org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#btnEntrar"}
   (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.129', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59528}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0e17d021791a26d54fdd0195df42ffe2
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62142}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d96afc30fb1eab232b802808192ca26f
 *** Element info: {Using=id, value=btnEntrar}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
@@ -718,8 +90,8 @@ Session ID: 0e17d021791a26d54fdd0195df42ffe2
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
 	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
-	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:149) ~[classes/:na]
-	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:67) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:172) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:66) ~[classes/:na]
 	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
 	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:62) ~[classes/:na]
 	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
@@ -737,17 +109,61 @@ Session ID: 0e17d021791a26d54fdd0195df42ffe2
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
 
-2022-03-09 21:31:48.512  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:31:48.517 ERROR 27684 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+2022-03-15 00:02:09.141 ERROR 24504 --- [task-2] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.automatization.signing.service.BotServiceImpl.sendNotification(java.lang.String,boolean)
 
-org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:5151/api/v1/notification": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.automatization.signing.service.BotServiceImpl.sendNotification(BotServiceImpl.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:574) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:563) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	... 16 common frames omitted
+
+2022-03-15 00:02:27.108  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 00:02:27.523 ERROR 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : OCURRIO UN ERROR AL LLENAR LOS DATOS
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
   (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.129', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59528}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0e17d021791a26d54fdd0195df42ffe2
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62142}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d96afc30fb1eab232b802808192ca26f
+*** Element info: {Using=id, value=tramiteGrupo[1]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
@@ -759,9 +175,12 @@ Session ID: 0e17d021791a26d54fdd0195df42ffe2
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) ~[selenium-remote-driver-3.141.59.jar:na]
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) ~[selenium-remote-driver-3.141.59.jar:na]
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) ~[selenium-remote-driver-3.141.59.jar:na]
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609) ~[selenium-remote-driver-3.141.59.jar:na]
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:694) ~[selenium-remote-driver-3.141.59.jar:na]
-	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:65) ~[classes/:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:168) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:66) ~[classes/:na]
 	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
 	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:62) ~[classes/:na]
 	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
@@ -779,17 +198,61 @@ Session ID: 0e17d021791a26d54fdd0195df42ffe2
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
 
-2022-03-09 21:31:53.520  INFO 27684 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
-2022-03-09 21:31:53.526 ERROR 27684 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+2022-03-15 00:02:29.565 ERROR 24504 --- [task-3] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.automatization.signing.service.BotServiceImpl.sendNotification(java.lang.String,boolean)
 
-org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:5151/api/v1/notification": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.automatization.signing.service.BotServiceImpl.sendNotification(BotServiceImpl.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:574) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:563) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	... 16 common frames omitted
+
+2022-03-15 00:02:47.539  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 00:02:47.780 ERROR 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : OCURRIO UN ERROR AL LLENAR LOS DATOS
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
   (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.129', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59528}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0e17d021791a26d54fdd0195df42ffe2
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62142}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d96afc30fb1eab232b802808192ca26f
+*** Element info: {Using=id, value=tramiteGrupo[1]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
@@ -801,9 +264,12 @@ Session ID: 0e17d021791a26d54fdd0195df42ffe2
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) ~[selenium-remote-driver-3.141.59.jar:na]
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) ~[selenium-remote-driver-3.141.59.jar:na]
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) ~[selenium-remote-driver-3.141.59.jar:na]
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609) ~[selenium-remote-driver-3.141.59.jar:na]
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:694) ~[selenium-remote-driver-3.141.59.jar:na]
-	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:65) ~[classes/:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:168) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:66) ~[classes/:na]
 	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
 	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:62) ~[classes/:na]
 	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
@@ -820,4 +286,136 @@ Session ID: 0e17d021791a26d54fdd0195df42ffe2
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 00:02:49.841 ERROR 24504 --- [task-4] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.automatization.signing.service.BotServiceImpl.sendNotification(java.lang.String,boolean)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:5151/api/v1/notification": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.automatization.signing.service.BotServiceImpl.sendNotification(BotServiceImpl.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:574) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:563) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	... 16 common frames omitted
+
+2022-03-15 00:03:07.791  INFO 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 00:03:08.010 ERROR 24504 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : OCURRIO UN ERROR AL LLENAR LOS DATOS
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62142}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d96afc30fb1eab232b802808192ca26f
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:168) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:66) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:62) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 00:03:10.061 ERROR 24504 --- [task-5] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.automatization.signing.service.BotServiceImpl.sendNotification(java.lang.String,boolean)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:5151/api/v1/notification": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.automatization.signing.service.BotServiceImpl.sendNotification(BotServiceImpl.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:574) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:563) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	... 16 common frames omitted
 

@@ -1,9 +1,10 @@
 package com.automatization.signing.proccess.cita;
 
 import com.automatization.signing.AutoException;
+import com.automatization.signing.model.Counter;
 import com.automatization.signing.model.Person;
-import com.automatization.signing.properties.Counter;
 import com.automatization.signing.properties.PersonProperties;
+import com.automatization.signing.repository.CounterRepository;
 import com.automatization.signing.service.BotService;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.*;
@@ -14,10 +15,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.text.MessageFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
-import static com.automatization.signing.util.ProccessHelper.*;
 
 
 /**
@@ -32,23 +34,23 @@ public class CitaPreviaComponent {
     private final BotService botService;
     @Value("${app.web.url-cita}")
     private String urlCita;
-    private Counter counter;
     private WebDriver driver;
+    private CounterRepository counterRepository;
 
     public CitaPreviaComponent(PersonProperties personProperties,
-                               Counter counter,
-                               BotService botService) {
+                               BotService botService,
+                               CounterRepository counterRepository) {
         this.personProperties = personProperties;
-        this.counter = counter;
         this.driver = builderDriver();
         this.botService = botService;
+        this.counterRepository = counterRepository;
     }
 
     private static WebDriver builderDriver() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+//        options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
-        driver.manage().window().setSize(new Dimension(1700, 1200));
+        driver.manage().window().setSize(new Dimension(1440, 900));
         return driver;
     }
 
@@ -68,18 +70,31 @@ public class CitaPreviaComponent {
                     } catch (AutoException e) {
                         log.info("MENSAJE DE ERROR :  {}",
                                 e.getMessage());
+                        Counter counter = getCounter();
+                        counter.setLastModify(LocalDateTime.now());
                         counter.setFail(counter.getFail() + 1);
+                        counterRepository.save(counter);
                     } catch (NoSuchElementException | ElementClickInterceptedException e) {
-                        log.info("OCURRIO UN ERROR AL LLENAR LOS DATOS");
+                        log.error("OCURRIO UN ERROR AL LLENAR LOS DATOS", e);
                         botService.sendNotification(
-                                MessageFormat.format("OCURRIO UN ERROR AL LLENAR LOS DATOS {}",
-                                        e.getMessage()),
+                                "OCURRIO UN ERROR AL LLENAR LOS DATOS",
                                 true);
                     }
 
                 });
 
 
+    }
+
+    private Counter getCounter() {
+        return counterRepository.findByCreated(LocalDate.now())
+                .orElseGet(() ->
+                        Counter.builder()
+                                .created(LocalDate.now())
+                                .fail(0)
+                                .success(0)
+                                .successDate(new ArrayList<>())
+                                .build());
     }
 
     private void stepFour(Person person, WebDriver driver) {
@@ -128,7 +143,11 @@ public class CitaPreviaComponent {
             throw new AutoException("No hay citas disponibles");
         } catch (NoSuchElementException noSuchElementException) {
             log.error("SE ENCONTRARON CITAS DISPONIBLE", noSuchElementException);
+            Counter counter = getCounter();
+            counter.setLastModify(LocalDateTime.now());
+            counter.getSuccessDate().add(counter.getLastModify());
             counter.setSuccess(counter.getSuccess() + 1);
+            counterRepository.save(counter);
         }
 
     }
@@ -154,23 +173,21 @@ public class CitaPreviaComponent {
     }
 
     public void sendResume() {
+        Counter counter = getCounter();
         botService.sendNotification(
                 MessageFormat.format("¡RESUMEN DEL DIA! En las ultimas 24 horas se encontraron {0} "
                                 .concat("citas de {1} intentos."),
                         counter.getSuccess(),
                         counter.getFail()
-                ), true);
-        resetCounter();
+                ), false);
+
     }
 
-    private void resetCounter() {
-        counter.setSuccess(0);
-        counter.setFail(0);
-    }
 
     public void sendActivityLog() {
+        Counter counter = getCounter();
         botService.sendNotification(
-                MessageFormat.format("¡REPORTE DE ACTIVIDAD, JOB 1! INTENTOS REALIZADOS {0} ",
+                MessageFormat.format("¡REPORTE DE ACTIVIDAD! INTENTOS REALIZADOS {0} ",
                         counter.getFail()
                 ), true);
     }
