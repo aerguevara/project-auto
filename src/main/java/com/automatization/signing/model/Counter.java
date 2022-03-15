@@ -23,4 +23,5 @@ public class Counter {
     private int fail;
     private int success;
     private List<LocalDateTime> successDate;
+    private List<LocalDateTime> blockFail;
 }

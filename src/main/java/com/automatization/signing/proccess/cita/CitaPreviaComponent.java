@@ -6,6 +6,7 @@ import com.automatization.signing.model.Person;
 import com.automatization.signing.properties.PersonProperties;
 import com.automatization.signing.repository.CounterRepository;
 import com.automatization.signing.service.BotService;
+import com.automatization.signing.util.ProccessHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -67,20 +68,16 @@ public class CitaPreviaComponent {
                         stepTwo(person, driver);
                         stepThree(driver);
                         stepFour(person, driver);
-                    } catch (AutoException e) {
-                        log.info("MENSAJE DE ERROR :  {}",
-                                e.getMessage());
+                    } catch (NoSuchElementException | ElementClickInterceptedException | AutoException e) {
+                        log.error("MENSAJE DE ERROR ", e);
                         Counter counter = getCounter();
                         counter.setLastModify(LocalDateTime.now());
                         counter.setFail(counter.getFail() + 1);
+                        if (driver.getPageSource().contains("ERROR [500]")) {
+                            counter.getBlockFail().add(LocalDateTime.now());
+                        }
                         counterRepository.save(counter);
-                    } catch (NoSuchElementException | ElementClickInterceptedException e) {
-                        log.error("OCURRIO UN ERROR AL LLENAR LOS DATOS", e);
-                        botService.sendNotification(
-                                "OCURRIO UN ERROR AL LLENAR LOS DATOS",
-                                true);
                     }
-
                 });
 
 
@@ -94,6 +91,7 @@ public class CitaPreviaComponent {
                                 .fail(0)
                                 .success(0)
                                 .successDate(new ArrayList<>())
+                                .blockFail(new ArrayList<>())
                                 .build());
     }
 
@@ -168,7 +166,9 @@ public class CitaPreviaComponent {
         Select select = new Select(driver.findElement(By.id("tramiteGrupo[1]")));
         select.selectByValue("4104");
         log.info("Tramite Seleccionado");
+        ProccessHelper.scrollDown(driver);
         driver.findElement(By.id("btnAceptar")).click();
+        ProccessHelper.scrollDown(driver);
         driver.findElement(By.id("btnEntrar")).click();
     }
 

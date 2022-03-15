@@ -419,3 +419,1441 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
 	... 16 common frames omitted
 
+2022-03-15 17:33:43.848  INFO 8948 --- [main] c.a.signing.SigningApplication           : Starting SigningApplication using Java 15.0.2 on LAPTOP-OKOUJH4I with PID 8948 (C:\Desarrollo\MI_AMORCITO\project-auto\target\classes started by cshar in C:\Desarrollo\MI_AMORCITO\project-auto)
+2022-03-15 17:33:43.856  INFO 8948 --- [main] c.a.signing.SigningApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-03-15 17:33:45.113  INFO 8948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-15 17:33:45.228  INFO 8948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 1 MongoDB repository interfaces.
+2022-03-15 17:33:46.429  INFO 8948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-15 17:33:46.455  INFO 8948 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-15 17:33:46.455  INFO 8948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-15 17:33:46.698  INFO 8948 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-15 17:33:46.699  INFO 8948 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2724 ms
+2022-03-15 17:33:47.132  INFO 8948 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[192.168.1.145:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-03-15 17:33:47.303  INFO 8948 --- [cluster-ClusterId{value='6230bfeb7a18bf11a5ae8ee6', description='null'}-192.168.1.145:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:98}] to 192.168.1.145:27017
+2022-03-15 17:33:47.303  INFO 8948 --- [cluster-rtt-ClusterId{value='6230bfeb7a18bf11a5ae8ee6', description='null'}-192.168.1.145:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:99}] to 192.168.1.145:27017
+2022-03-15 17:33:47.304  INFO 8948 --- [cluster-ClusterId{value='6230bfeb7a18bf11a5ae8ee6', description='null'}-192.168.1.145:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=192.168.1.145:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=54747100}
+2022-03-15 17:33:50.786  INFO 8948 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
+2022-03-15 17:33:52.206  INFO 8948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-15 17:33:52.249  INFO 8948 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 17:33:52.264  INFO 8948 --- [main] c.a.signing.SigningApplication           : Started SigningApplication in 9.549 seconds (JVM running for 10.998)
+2022-03-15 17:33:55.042  INFO 8948 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 17:33:57.119  INFO 8948 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 17:33:57.927  INFO 8948 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 17:33:58.092  INFO 8948 --- [scheduling-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:100}] to 192.168.1.145:27017
+2022-03-15 17:34:12.389  INFO 22356 --- [main] c.a.signing.SigningApplication           : Starting SigningApplication using Java 15.0.2 on LAPTOP-OKOUJH4I with PID 22356 (C:\Desarrollo\MI_AMORCITO\project-auto\target\classes started by cshar in C:\Desarrollo\MI_AMORCITO\project-auto)
+2022-03-15 17:34:12.397  INFO 22356 --- [main] c.a.signing.SigningApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-03-15 17:34:13.599  INFO 22356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-15 17:34:13.717  INFO 22356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 1 MongoDB repository interfaces.
+2022-03-15 17:34:14.841  INFO 22356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-15 17:34:14.868  INFO 22356 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-15 17:34:14.869  INFO 22356 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-15 17:34:15.103  INFO 22356 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-15 17:34:15.104  INFO 22356 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2584 ms
+2022-03-15 17:34:15.537  INFO 22356 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[192.168.1.145:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-03-15 17:34:15.714  INFO 22356 --- [cluster-rtt-ClusterId{value='6230c00771c9e227227a24c1', description='null'}-192.168.1.145:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:102}] to 192.168.1.145:27017
+2022-03-15 17:34:15.714  INFO 22356 --- [cluster-ClusterId{value='6230c00771c9e227227a24c1', description='null'}-192.168.1.145:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:101}] to 192.168.1.145:27017
+2022-03-15 17:34:15.715  INFO 22356 --- [cluster-ClusterId{value='6230c00771c9e227227a24c1', description='null'}-192.168.1.145:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=192.168.1.145:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=48598700}
+2022-03-15 17:34:18.495  INFO 22356 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
+2022-03-15 17:34:19.503  INFO 22356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-15 17:34:19.530  INFO 22356 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 17:34:19.538  INFO 22356 --- [main] c.a.signing.SigningApplication           : Started SigningApplication in 8.174 seconds (JVM running for 9.321)
+2022-03-15 17:34:21.357  INFO 22356 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 17:34:23.542  INFO 22356 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 17:34:24.348  INFO 22356 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 17:34:24.462  INFO 22356 --- [scheduling-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:103}] to 192.168.1.145:27017
+2022-03-15 20:11:12.844  INFO 16772 --- [main] c.a.signing.SigningApplication           : Starting SigningApplication using Java 15.0.2 on LAPTOP-OKOUJH4I with PID 16772 (C:\Desarrollo\MI_AMORCITO\project-auto\target\classes started by cshar in C:\Desarrollo\MI_AMORCITO\project-auto)
+2022-03-15 20:11:12.850  INFO 16772 --- [main] c.a.signing.SigningApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-03-15 20:11:14.144  INFO 16772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-15 20:11:14.256  INFO 16772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 1 MongoDB repository interfaces.
+2022-03-15 20:11:15.674  INFO 16772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-15 20:11:15.696  INFO 16772 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-15 20:11:15.697  INFO 16772 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-15 20:11:15.893  INFO 16772 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-15 20:11:15.895  INFO 16772 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2942 ms
+2022-03-15 20:11:16.445  INFO 16772 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[192.168.1.145:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-03-15 20:11:16.634  INFO 16772 --- [cluster-rtt-ClusterId{value='6230e4d433234d32e36ff81c', description='null'}-192.168.1.145:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:115}] to 192.168.1.145:27017
+2022-03-15 20:11:16.634  INFO 16772 --- [cluster-ClusterId{value='6230e4d433234d32e36ff81c', description='null'}-192.168.1.145:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:116}] to 192.168.1.145:27017
+2022-03-15 20:11:16.636  INFO 16772 --- [cluster-ClusterId{value='6230e4d433234d32e36ff81c', description='null'}-192.168.1.145:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=192.168.1.145:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=54385500}
+2022-03-15 20:11:19.508  INFO 16772 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
+2022-03-15 20:11:20.655  INFO 16772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-15 20:11:20.681  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:11:20.681  INFO 16772 --- [main] c.a.signing.SigningApplication           : Started SigningApplication in 9.699 seconds (JVM running for 10.825)
+2022-03-15 20:11:22.490  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:11:24.345  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:11:24.978  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:11:25.273  INFO 16772 --- [scheduling-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:117}] to 192.168.1.145:27017
+2022-03-15 20:11:45.431  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:11:46.772  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:11:47.880  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:11:48.526  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:12:08.555  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:12:10.001  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:12:11.108  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:12:11.748  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:12:31.780  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:12:33.087  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:12:34.440  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:12:35.103  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:12:55.136  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:12:56.383  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:12:57.499  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:12:58.164  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:13:18.194  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:13:19.544  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:13:20.817  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:13:21.461  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:13:41.487  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:13:42.791  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:13:43.878  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:13:44.504  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:14:04.527  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:14:06.136  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:14:07.237  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:14:07.868  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:14:27.886  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:14:29.573  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:14:30.709  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:14:31.377  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:14:51.394  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:14:52.951  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:14:54.100  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:14:54.757  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:15:14.786  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:15:16.175  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:15:17.264  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:15:18.315  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:15:38.338  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:15:41.747  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:15:42.912  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:15:43.653  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:16:03.672  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:16:05.117  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:17:36.476 ERROR 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : OCURRIO UN ERROR AL LLENAR LOS DATOS
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#btnEntrar"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64919}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 15ebb71f5586342cb61e5d7391cad37c
+*** Element info: {Using=id, value=btnEntrar}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:175) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:67) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 20:17:38.627 ERROR 16772 --- [task-1] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.automatization.signing.service.BotServiceImpl.sendNotification(java.lang.String,boolean)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:5151/api/v1/notification": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.automatization.signing.service.BotServiceImpl.sendNotification(BotServiceImpl.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:574) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:563) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	... 16 common frames omitted
+
+2022-03-15 20:17:56.483  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:20:45.214 ERROR 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : OCURRIO UN ERROR AL LLENAR LOS DATOS
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64919}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 15ebb71f5586342cb61e5d7391cad37c
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:169) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:67) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 20:20:47.262 ERROR 16772 --- [task-2] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.automatization.signing.service.BotServiceImpl.sendNotification(java.lang.String,boolean)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:5151/api/v1/notification": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.automatization.signing.service.BotServiceImpl.sendNotification(BotServiceImpl.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:574) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:563) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	... 16 common frames omitted
+
+2022-03-15 20:21:05.217  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:21:08.292  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:21:09.397  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:21:09.971  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:21:29.994  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:21:40.996  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:21:41.898  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:21:42.476  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:22:02.507  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:22:06.266  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:22:09.882  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:22:11.802  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:22:31.823  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:22:33.359  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:22:34.267  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:22:34.859  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:22:54.883  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:22:58.878  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:23:01.061  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:23:01.913  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:23:21.941  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:23:25.355  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:23:27.653  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:23:28.590  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:23:48.616  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:23:53.478  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:23:54.550  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:23:55.267  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:24:15.302  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:24:17.209  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:24:18.428  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:24:19.194  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:24:39.219  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:24:41.498  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:24:42.886  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:24:43.541  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:25:03.566  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:25:05.596  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:25:06.791  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:25:07.562  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:25:27.593  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:25:29.288  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:25:31.322  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:25:32.152  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:25:52.191  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:25:54.078  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:25:55.280  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:25:56.172  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:26:16.194  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:26:18.442  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Tramite Seleccionado
+2022-03-15 20:26:19.519  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : Campos de datos relleno
+2022-03-15 20:26:20.295  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  No hay citas disponibles
+2022-03-15 20:26:40.317  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:26:51.277 ERROR 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : OCURRIO UN ERROR AL LLENAR LOS DATOS
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64919}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 15ebb71f5586342cb61e5d7391cad37c
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:169) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:67) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor33.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 20:26:53.320 ERROR 16772 --- [task-3] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.automatization.signing.service.BotServiceImpl.sendNotification(java.lang.String,boolean)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:5151/api/v1/notification": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.automatization.signing.service.BotServiceImpl.sendNotification(BotServiceImpl.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:574) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:563) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	... 16 common frames omitted
+
+2022-03-15 20:27:11.295  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:27:15.025 ERROR 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : OCURRIO UN ERROR AL LLENAR LOS DATOS
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64919}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 15ebb71f5586342cb61e5d7391cad37c
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:169) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:67) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor33.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 20:27:17.075 ERROR 16772 --- [task-4] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.automatization.signing.service.BotServiceImpl.sendNotification(java.lang.String,boolean)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:5151/api/v1/notification": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.automatization.signing.service.BotServiceImpl.sendNotification(BotServiceImpl.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:574) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:563) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	... 16 common frames omitted
+
+2022-03-15 20:27:35.040  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:27:37.850 ERROR 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : OCURRIO UN ERROR AL LLENAR LOS DATOS
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64919}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 15ebb71f5586342cb61e5d7391cad37c
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:169) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:67) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor33.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 20:27:39.901 ERROR 16772 --- [task-5] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.automatization.signing.service.BotServiceImpl.sendNotification(java.lang.String,boolean)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:5151/api/v1/notification": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.automatization.signing.service.BotServiceImpl.sendNotification(BotServiceImpl.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:574) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:563) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	... 16 common frames omitted
+
+2022-03-15 20:27:57.856  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:29:06.316 ERROR 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : OCURRIO UN ERROR AL LLENAR LOS DATOS
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64919}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 15ebb71f5586342cb61e5d7391cad37c
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:169) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:67) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor33.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 20:29:08.354 ERROR 16772 --- [task-6] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.automatization.signing.service.BotServiceImpl.sendNotification(java.lang.String,boolean)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:5151/api/v1/notification": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.automatization.signing.service.BotServiceImpl.sendNotification(BotServiceImpl.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:574) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:563) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	... 16 common frames omitted
+
+2022-03-15 20:29:26.320  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:29:26.516 ERROR 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : OCURRIO UN ERROR AL LLENAR LOS DATOS
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64919}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 15ebb71f5586342cb61e5d7391cad37c
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:169) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:67) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor33.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 20:29:28.551 ERROR 16772 --- [task-7] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.automatization.signing.service.BotServiceImpl.sendNotification(java.lang.String,boolean)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:5151/api/v1/notification": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.automatization.signing.service.BotServiceImpl.sendNotification(BotServiceImpl.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:574) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:563) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	... 16 common frames omitted
+
+2022-03-15 20:29:46.533  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:29:46.720 ERROR 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : OCURRIO UN ERROR AL LLENAR LOS DATOS
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64919}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 15ebb71f5586342cb61e5d7391cad37c
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:169) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:67) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor33.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 20:29:48.763 ERROR 16772 --- [task-8] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.automatization.signing.service.BotServiceImpl.sendNotification(java.lang.String,boolean)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:5151/api/v1/notification": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.automatization.signing.service.BotServiceImpl.sendNotification(BotServiceImpl.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:574) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:563) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	... 16 common frames omitted
+
+2022-03-15 20:30:06.736  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:30:06.936 ERROR 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : OCURRIO UN ERROR AL LLENAR LOS DATOS
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64919}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 15ebb71f5586342cb61e5d7391cad37c
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:169) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:67) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor33.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 20:30:08.989 ERROR 16772 --- [task-9] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.automatization.signing.service.BotServiceImpl.sendNotification(java.lang.String,boolean)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:5151/api/v1/notification": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.automatization.signing.service.BotServiceImpl.sendNotification(BotServiceImpl.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:574) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:563) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	... 16 common frames omitted
+
+2022-03-15 20:30:26.952  INFO 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:30:27.124 ERROR 16772 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : OCURRIO UN ERROR AL LLENAR LOS DATOS
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64919}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 15ebb71f5586342cb61e5d7391cad37c
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:169) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:67) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor33.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 20:30:29.175 ERROR 16772 --- [task-10] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.automatization.signing.service.BotServiceImpl.sendNotification(java.lang.String,boolean)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:5151/api/v1/notification": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.automatization.signing.service.BotServiceImpl.sendNotification(BotServiceImpl.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:574) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:563) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	... 16 common frames omitted
+
+2022-03-15 20:30:40.359  INFO 21656 --- [main] c.a.signing.SigningApplication           : Starting SigningApplication using Java 15.0.2 on LAPTOP-OKOUJH4I with PID 21656 (C:\Desarrollo\MI_AMORCITO\project-auto\target\classes started by cshar in C:\Desarrollo\MI_AMORCITO\project-auto)
+2022-03-15 20:30:40.365  INFO 21656 --- [main] c.a.signing.SigningApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-03-15 20:30:41.426  INFO 21656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-15 20:30:41.520  INFO 21656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 1 MongoDB repository interfaces.
+2022-03-15 20:30:42.482  INFO 21656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-15 20:30:42.498  INFO 21656 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-15 20:30:42.498  INFO 21656 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-15 20:30:42.687  INFO 21656 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-15 20:30:42.688  INFO 21656 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2225 ms
+2022-03-15 20:30:43.141  INFO 21656 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[192.168.1.145:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-03-15 20:30:43.307  INFO 21656 --- [cluster-ClusterId{value='6230e963ba0eb27f8a01c2c9', description='null'}-192.168.1.145:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:120}] to 192.168.1.145:27017
+2022-03-15 20:30:43.307  INFO 21656 --- [cluster-rtt-ClusterId{value='6230e963ba0eb27f8a01c2c9', description='null'}-192.168.1.145:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:121}] to 192.168.1.145:27017
+2022-03-15 20:30:43.308  INFO 21656 --- [cluster-ClusterId{value='6230e963ba0eb27f8a01c2c9', description='null'}-192.168.1.145:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=192.168.1.145:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=54831800}
+2022-03-15 20:30:45.893  INFO 21656 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
+2022-03-15 20:30:47.053  INFO 21656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-15 20:30:47.070  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:30:47.075  INFO 21656 --- [main] c.a.signing.SigningApplication           : Started SigningApplication in 7.774 seconds (JVM running for 9.223)
+2022-03-15 20:30:47.543  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb9edbd1fad8e34266cf52fa19cffa55
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+2022-03-15 20:30:47.728  INFO 21656 --- [scheduling-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:122}] to 192.168.1.145:27017
+2022-03-15 20:30:47.826 ERROR 21656 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because the return value of "com.automatization.signing.model.Counter.getBlockFail()" is null
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:78) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 20:31:07.839  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:31:08.042  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb9edbd1fad8e34266cf52fa19cffa55
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+2022-03-15 20:31:08.061 ERROR 21656 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because the return value of "com.automatization.signing.model.Counter.getBlockFail()" is null
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:78) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 20:31:28.065  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:31:28.461  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb9edbd1fad8e34266cf52fa19cffa55
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+2022-03-15 20:31:28.489 ERROR 21656 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because the return value of "com.automatization.signing.model.Counter.getBlockFail()" is null
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:78) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 20:31:48.496  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:31:49.418  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb9edbd1fad8e34266cf52fa19cffa55
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+2022-03-15 20:31:49.439 ERROR 21656 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because the return value of "com.automatization.signing.model.Counter.getBlockFail()" is null
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:78) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 20:32:09.441  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:32:09.696  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb9edbd1fad8e34266cf52fa19cffa55
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+2022-03-15 20:32:29.832  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:32:30.056  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb9edbd1fad8e34266cf52fa19cffa55
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+2022-03-15 20:32:50.106  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:32:50.343  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb9edbd1fad8e34266cf52fa19cffa55
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+2022-03-15 20:33:10.382  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:33:10.610  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb9edbd1fad8e34266cf52fa19cffa55
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+2022-03-15 20:33:30.652  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:33:34.013  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb9edbd1fad8e34266cf52fa19cffa55
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+2022-03-15 20:33:54.041  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:34:01.416  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb9edbd1fad8e34266cf52fa19cffa55
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+2022-03-15 20:34:21.463  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:34:32.994  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb9edbd1fad8e34266cf52fa19cffa55
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+2022-03-15 20:34:53.041  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:35:00.455  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb9edbd1fad8e34266cf52fa19cffa55
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+2022-03-15 20:35:20.491  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:35:25.258  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb9edbd1fad8e34266cf52fa19cffa55
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+2022-03-15 20:35:45.505  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:35:45.752  INFO 21656 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR :  no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb9edbd1fad8e34266cf52fa19cffa55
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+2022-03-15 20:36:46.756  INFO 3164 --- [main] c.a.signing.SigningApplication           : Starting SigningApplication using Java 15.0.2 on LAPTOP-OKOUJH4I with PID 3164 (C:\Desarrollo\MI_AMORCITO\project-auto\target\classes started by cshar in C:\Desarrollo\MI_AMORCITO\project-auto)
+2022-03-15 20:36:46.760  INFO 3164 --- [main] c.a.signing.SigningApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-03-15 20:36:47.837  INFO 3164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-15 20:36:47.933  INFO 3164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 1 MongoDB repository interfaces.
+2022-03-15 20:36:48.932  INFO 3164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-15 20:36:48.945  INFO 3164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-15 20:36:48.946  INFO 3164 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-15 20:36:49.128  INFO 3164 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-15 20:36:49.129  INFO 3164 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2276 ms
+2022-03-15 20:36:49.538  INFO 3164 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[192.168.1.145:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-03-15 20:36:49.671  INFO 3164 --- [cluster-ClusterId{value='6230ead1da374f55de1beb48', description='null'}-192.168.1.145:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:123}] to 192.168.1.145:27017
+2022-03-15 20:36:49.671  INFO 3164 --- [cluster-rtt-ClusterId{value='6230ead1da374f55de1beb48', description='null'}-192.168.1.145:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:124}] to 192.168.1.145:27017
+2022-03-15 20:36:49.672  INFO 3164 --- [cluster-ClusterId{value='6230ead1da374f55de1beb48', description='null'}-192.168.1.145:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=192.168.1.145:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=36312400}
+2022-03-15 20:36:52.358  INFO 3164 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
+2022-03-15 20:36:53.395  INFO 3164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-15 20:36:53.415  INFO 3164 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:36:53.421  INFO 3164 --- [main] c.a.signing.SigningApplication           : Started SigningApplication in 7.583 seconds (JVM running for 8.561)
+2022-03-15 20:37:02.739 ERROR 3164 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR 
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65391}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f5aa52b235dfcc3b932d03acfc892684
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:166) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:67) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 20:37:02.834  INFO 3164 --- [scheduling-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:125}] to 192.168.1.145:27017
+2022-03-15 20:37:22.995  INFO 3164 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:37:24.370 ERROR 3164 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR 
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65391}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f5aa52b235dfcc3b932d03acfc892684
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:166) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:67) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2022-03-15 20:37:44.407  INFO 3164 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : *****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************
+2022-03-15 20:37:45.921 ERROR 3164 --- [scheduling-1] c.a.s.proccess.cita.CitaPreviaComponent  : MENSAJE DE ERROR 
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#tramiteGrupo\[1\]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OKOUJH4I', ip: '192.168.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\cshar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65391}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f5aa52b235dfcc3b932d03acfc892684
+*** Element info: {Using=id, value=tramiteGrupo[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372) ~[selenium-remote-driver-3.141.59.jar:na]
+	at org.openqa.selenium.By$ById.findElement(By.java:188) ~[selenium-api-3.141.59.jar:na]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315) ~[selenium-remote-driver-3.141.59.jar:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.stepOne(CitaPreviaComponent.java:166) ~[classes/:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.lambda$iniciarProcesoCita$0(CitaPreviaComponent.java:67) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:176) ~[na:na]
+	at com.automatization.signing.proccess.cita.CitaPreviaComponent.iniciarProcesoCita(CitaPreviaComponent.java:63) ~[classes/:na]
+	at com.automatization.signing.Job.CitaJob.initProccess(CitaJob.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.16.jar:5.3.16]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+

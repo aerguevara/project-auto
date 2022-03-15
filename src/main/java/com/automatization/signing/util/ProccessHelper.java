@@ -2,12 +2,8 @@ package com.automatization.signing.util;
 
 import lombok.extern.slf4j.Slf4j;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.File;
@@ -51,6 +47,11 @@ public final class ProccessHelper {
         TakesScreenshot screenshot = (TakesScreenshot) webDriver;
         return screenshot.getScreenshotAs(OutputType.FILE);
 
+    }
+
+    public static void scrollDown(WebDriver webDriver) {
+        JavascriptExecutor js = (JavascriptExecutor) webDriver;
+        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
     }
 
 }

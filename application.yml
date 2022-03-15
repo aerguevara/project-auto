@@ -15,7 +15,7 @@ app:
     url-cita: https://sede.administracionespublicas.gob.es/icpplustiem/citar?p=28&locale=es
   web-driver:
     url: C:\Desarrollo\MI_AMORCITO\chromedriver.exe # ruta del chromedriver para el control de chrome
-  fixed-delay: "60000" #milesecond
+  fixed-delay: "20000" #milesecond
   job:
     cron: 0 0 20 * * *
     cron-spt: "0 0 */1 * * *"
