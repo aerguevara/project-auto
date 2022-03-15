@@ -16,6 +16,7 @@ app:
   web-driver:
     url: C:\Desarrollo\MI_AMORCITO\chromedriver.exe # ruta del chromedriver para el control de chrome
   fixed-delay: "20000" #milesecond
+  sleep-minute: 10
   job:
     cron: 0 0 20 * * *
     cron-spt: "0 0 */1 * * *"

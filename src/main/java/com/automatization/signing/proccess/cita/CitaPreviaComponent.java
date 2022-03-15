@@ -18,6 +18,7 @@ import org.springframework.stereotype.Component;
 import java.text.MessageFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -37,6 +38,8 @@ public class CitaPreviaComponent {
     private String urlCita;
     private WebDriver driver;
     private CounterRepository counterRepository;
+    @Value("${app.sleep-minute}")
+    private int sleepMinute;
 
     public CitaPreviaComponent(PersonProperties personProperties,
                                BotService botService,
@@ -56,30 +59,49 @@ public class CitaPreviaComponent {
     }
 
     public void iniciarProcesoCita() {
-        log.info("*****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************");
-        personProperties.getData()
-                .stream()
-                .findFirst()
-                .ifPresent((Person person) -> {
-                    try {
-                        driver.manage().deleteAllCookies();
-                        driver.navigate().to(urlCita);
-                        stepOne(driver);
-                        stepTwo(person, driver);
-                        stepThree(driver);
-                        stepFour(person, driver);
-                    } catch (NoSuchElementException | ElementClickInterceptedException | AutoException e) {
-                        log.error("MENSAJE DE ERROR ", e);
-                        Counter counter = getCounter();
-                        counter.setLastModify(LocalDateTime.now());
-                        counter.setFail(counter.getFail() + 1);
-                        if (driver.getPageSource().contains("ERROR [500]")) {
-                            counter.getBlockFail().add(LocalDateTime.now());
-                        }
-                        counterRepository.save(counter);
-                    }
-                });
+        boolean entry =
+                getCounter()
+                        .getBlockFail()
+                        .stream()
+                        .max(LocalDateTime::compareTo)
+                        .map(this::compareMilisecondSleep)
+                        .orElse(true);
+        if (entry) {
 
+            log.info("*****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************");
+            personProperties.getData()
+                    .stream()
+                    .findFirst()
+                    .ifPresent((Person person) -> {
+                        try {
+                            driver.manage().deleteAllCookies();
+                            driver.navigate().to(urlCita);
+                            stepOne(driver);
+                            stepTwo(person, driver);
+                            stepThree(driver);
+                            stepFour(person, driver);
+                        } catch (NoSuchElementException | ElementClickInterceptedException | AutoException e) {
+                            log.error("MENSAJE DE ERROR ", e);
+                            Counter counter = getCounter();
+                            counter.setLastModify(LocalDateTime.now());
+                            counter.setFail(counter.getFail() + 1);
+                            if (driver.getPageSource().contains("ERROR [500]")) {
+                                counter.getBlockFail().add(LocalDateTime.now());
+                            }
+                            counterRepository.save(counter);
+                        }
+                    });
+
+        } else {
+            log.info("SLEEP POR BLOQUEO");
+        }
+
+
+    }
+
+    private boolean compareMilisecondSleep(LocalDateTime lastBlock) {
+        long minute = ChronoUnit.MINUTES.between(lastBlock, LocalDateTime.now());
+        return minute >= sleepMinute;
 
     }
 
