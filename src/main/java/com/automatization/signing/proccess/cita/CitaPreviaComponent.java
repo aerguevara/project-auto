@@ -118,6 +118,7 @@ public class CitaPreviaComponent {
     }
 
     private void stepFour(Person person, WebDriver driver) {
+        log.info("RESOURCE PAGE ERROR {}", driver.getPageSource());
         Select selectSede = new Select(driver.findElement(By.id("idSede")));
         String sedeDisponible = selectSede
                 .getOptions()
@@ -130,7 +131,7 @@ public class CitaPreviaComponent {
                         "ASILO - PRIMERA CITA-provincia de Madrid"
                         , sedeDisponible),
                 false);
-        stepFiveBuilder(selectSede, person);
+        // stepFiveBuilder(selectSede, person);
     }
 
     private void stepFiveBuilder(Select selectSede, Person person) {
