@@ -79,7 +79,7 @@ public class CitaPreviaComponent {
                             stepOne(driver);
                             stepTwo(person, driver);
                             stepThree(driver);
-                            stepFour(person, driver);
+                            stepFour(driver);
                         } catch (NoSuchElementException | ElementClickInterceptedException | AutoException e) {
                             log.error("MENSAJE DE ERROR ", e);
                             Counter counter = getCounter();
@@ -117,8 +117,8 @@ public class CitaPreviaComponent {
                                 .build());
     }
 
-    private void stepFour(Person person, WebDriver driver) {
-        log.info("RESOURCE PAGE ERROR {}", driver.getPageSource());
+    private void stepFour(WebDriver driver) {
+        log.info("RESOURCE PAGE DIFF ERROR 500 {}", driver.getPageSource());
         Select selectSede = new Select(driver.findElement(By.id("idSede")));
         String sedeDisponible = selectSede
                 .getOptions()
@@ -163,12 +163,17 @@ public class CitaPreviaComponent {
                     By.xpath("//p[contains(text(),'En este momento no hay citas disponibles.')]"));
             throw new AutoException("No hay citas disponibles");
         } catch (NoSuchElementException noSuchElementException) {
-            log.error("SE ENCONTRARON CITAS DISPONIBLE", noSuchElementException);
-            Counter counter = getCounter();
-            counter.setLastModify(LocalDateTime.now());
-            counter.getSuccessDate().add(counter.getLastModify());
-            counter.setSuccess(counter.getSuccess() + 1);
-            counterRepository.save(counter);
+            if (!driver.getPageSource().contains("ERROR [500]")) {
+                log.error("SE ENCONTRARON CITAS DISPONIBLE", noSuchElementException);
+                Counter counter = getCounter();
+                counter.setLastModify(LocalDateTime.now());
+                counter.getSuccessDate().add(counter.getLastModify());
+                counter.setSuccess(counter.getSuccess() + 1);
+                counterRepository.save(counter);
+            } else {
+                throw new AutoException("No hay citas disponibles");
+            }
+
         }
 
     }

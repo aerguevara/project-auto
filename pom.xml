@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.automatization</groupId>
     <artifactId>signing</artifactId>
-    <version>0.0.12-SNAPSHOT</version>
+    <version>0.0.14-SNAPSHOT</version>
     <name>signing</name>
     <description>Proyecto</description>
 
