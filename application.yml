@@ -11,6 +11,8 @@ logging:
 app:
   bot:
     url: http://localhost:5151/api/v1/notification
+    url-unique: http://localhost:5151/api/v1/notification/unique
+    channel-id: "@cita_asilo_madrid"
   web:
     url-cita: https://sede.administracionespublicas.gob.es/icpplustiem/citar?p=28&locale=es
   web-driver:
@@ -19,7 +21,7 @@ app:
   sleep-minute: 10
   job:
     cron: 0 0 20 * * *
-    cron-spt: "0 0 */1 * * *"
+    cron-spt: "0 0 */2 * * *"
     id: "1"
 
 person:

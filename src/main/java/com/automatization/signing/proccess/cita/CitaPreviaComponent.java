@@ -52,7 +52,7 @@ public class CitaPreviaComponent {
         this.botService = botService;
         this.counterRepository = counterRepository;
         this.driverOriginal = builderDriver();
-        this.remoteDriver = builderRemoteDriver();
+        // this.remoteDriver = builderRemoteDriver();
     }
 
     private static WebDriver builderRemoteDriver() {
@@ -88,7 +88,7 @@ public class CitaPreviaComponent {
             findDateByWebDriver(driverOriginal);
         } else {
             log.info("SLEEP POR BLOQUEO, USAMOS EL DRIVER REMOTO PARA BURLAR EL BLOQUEO");
-            findDateByWebDriver(remoteDriver);
+            // findDateByWebDriver(remoteDriver);
         }
 
 
@@ -228,8 +228,15 @@ public class CitaPreviaComponent {
                                 .concat("citas de {1} intentos."),
                         counter.getSuccess(),
                         counter.getFail()
-                ), false);
+                ),
+                false);
 
+        botService.sendNotificationUnique(
+                MessageFormat.format("¡RESUMEN DEL DIA! En las ultimas 24 horas se encontrarón {0} "
+                                .concat("citas de {1} intentos.\n\nPara más información entra en @NimbusGodBot."),
+                        counter.getSuccess(),
+                        counter.getFail()
+                ));
     }
 
 
