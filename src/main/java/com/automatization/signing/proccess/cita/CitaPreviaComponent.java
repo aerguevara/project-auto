@@ -152,6 +152,11 @@ public class CitaPreviaComponent {
                         "ASILO - PRIMERA CITA-provincia de Madrid"
                         , sedeDisponible),
                 false);
+        Counter counter = getCounter();
+        counter.setLastModify(LocalDateTime.now());
+        counter.getSuccessDate().add(counter.getLastModify());
+        counter.setSuccess(counter.getSuccess() + 1);
+        counterRepository.save(counter);
         // stepFiveBuilder(selectSede, person);
     }
 
@@ -186,11 +191,6 @@ public class CitaPreviaComponent {
         } catch (NoSuchElementException noSuchElementException) {
             if (!driver.getPageSource().contains("ERROR [500]")) {
                 log.error("SE ENCONTRARON CITAS DISPONIBLE", noSuchElementException);
-                Counter counter = getCounter();
-                counter.setLastModify(LocalDateTime.now());
-                counter.getSuccessDate().add(counter.getLastModify());
-                counter.setSuccess(counter.getSuccess() + 1);
-                counterRepository.save(counter);
             } else {
                 throw new AutoException("No hay citas disponibles");
             }
