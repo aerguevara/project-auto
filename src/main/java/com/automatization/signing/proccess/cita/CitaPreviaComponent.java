@@ -11,10 +11,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.MessageFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -36,7 +39,8 @@ public class CitaPreviaComponent {
     private final BotService botService;
     @Value("${app.web.url-cita}")
     private String urlCita;
-    private WebDriver driver;
+    private WebDriver driverOriginal;
+    private WebDriver remoteDriver;
     private CounterRepository counterRepository;
     @Value("${app.sleep-minute}")
     private int sleepMinute;
@@ -45,9 +49,23 @@ public class CitaPreviaComponent {
                                BotService botService,
                                CounterRepository counterRepository) {
         this.personProperties = personProperties;
-        this.driver = builderDriver();
         this.botService = botService;
         this.counterRepository = counterRepository;
+        this.driverOriginal = builderDriver();
+        this.remoteDriver = builderRemoteDriver();
+    }
+
+    private static WebDriver builderRemoteDriver() {
+        URL url = null;
+        try {
+            url = new URL("http://192.168.1.145:4444/wd/hub");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        ChromeOptions options = new ChromeOptions();
+        WebDriver remoteWebDriver = new RemoteWebDriver(url, options);
+        remoteWebDriver.manage().window().setSize(new Dimension(1440, 900));
+        return remoteWebDriver;
     }
 
     private static WebDriver builderDriver() {
@@ -67,36 +85,39 @@ public class CitaPreviaComponent {
                         .map(this::compareMilisecondSleep)
                         .orElse(true);
         if (entry) {
-
-            log.info("*****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************");
-            personProperties.getData()
-                    .stream()
-                    .findFirst()
-                    .ifPresent((Person person) -> {
-                        try {
-                            driver.manage().deleteAllCookies();
-                            driver.navigate().to(urlCita);
-                            stepOne(driver);
-                            stepTwo(person, driver);
-                            stepThree(driver);
-                            stepFour(driver);
-                        } catch (NoSuchElementException | ElementClickInterceptedException | AutoException e) {
-                            log.error("MENSAJE DE ERROR ", e);
-                            Counter counter = getCounter();
-                            counter.setLastModify(LocalDateTime.now());
-                            counter.setFail(counter.getFail() + 1);
-                            if (driver.getPageSource().contains("ERROR [500]")) {
-                                counter.getBlockFail().add(LocalDateTime.now());
-                            }
-                            counterRepository.save(counter);
-                        }
-                    });
-
+            findDateByWebDriver(driverOriginal);
         } else {
-            log.info("SLEEP POR BLOQUEO");
+            log.info("SLEEP POR BLOQUEO, USAMOS EL DRIVER REMOTO PARA BURLAR EL BLOQUEO");
+            findDateByWebDriver(remoteDriver);
         }
 
 
+    }
+
+    private void findDateByWebDriver(WebDriver localDriver) {
+        log.info("*****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************");
+        personProperties.getData()
+                .stream()
+                .findFirst()
+                .ifPresent((Person person) -> {
+                    try {
+                        localDriver.manage().deleteAllCookies();
+                        localDriver.navigate().to(urlCita);
+                        stepOne(localDriver);
+                        stepTwo(person, localDriver);
+                        stepThree(localDriver);
+                        stepFour(localDriver);
+                    } catch (NoSuchElementException | ElementClickInterceptedException | AutoException e) {
+                        log.error("MENSAJE DE ERROR ", e);
+                        Counter counter = getCounter();
+                        counter.setLastModify(LocalDateTime.now());
+                        counter.setFail(counter.getFail() + 1);
+                        if (localDriver.getPageSource().contains("ERROR [500]")) {
+                            counter.getBlockFail().add(LocalDateTime.now());
+                        }
+                        counterRepository.save(counter);
+                    }
+                });
     }
 
     private boolean compareMilisecondSleep(LocalDateTime lastBlock) {
@@ -134,9 +155,9 @@ public class CitaPreviaComponent {
         // stepFiveBuilder(selectSede, person);
     }
 
-    private void stepFiveBuilder(Select selectSede, Person person) {
+    private void stepFiveBuilder(Select selectSede, Person person, WebDriver driverInProgress) {
         log.info("*****************************INICIAMOS FASE 5 DEL PROCESO DE SOLICITUD*****************************");
-        log.info(driver.getPageSource());
+        log.info(driverInProgress.getPageSource());
         Optional<WebElement> selected = selectSede
                 .getOptions()
                 .stream()
@@ -144,14 +165,14 @@ public class CitaPreviaComponent {
                 .findFirst();
         selected.ifPresent((WebElement webElement) -> {
             selectSede.selectByVisibleText(webElement.getText());
-            driver.findElement(By.id("btnSiguiente")).click();
-            driver.findElement(By.id("txtTelefonoCitado")).sendKeys(person.getPhone());
-            driver.findElement(By.id("emailUNO")).sendKeys(person.getMail());
-            driver.findElement(By.id("emailDOS")).sendKeys(person.getMail());
-            log.info(driver.getPageSource());
-            driver.findElement(By.id("btnSiguiente")).click();
+            driverInProgress.findElement(By.id("btnSiguiente")).click();
+            driverInProgress.findElement(By.id("txtTelefonoCitado")).sendKeys(person.getPhone());
+            driverInProgress.findElement(By.id("emailUNO")).sendKeys(person.getMail());
+            driverInProgress.findElement(By.id("emailDOS")).sendKeys(person.getMail());
+            log.info(driverInProgress.getPageSource());
+            driverInProgress.findElement(By.id("btnSiguiente")).click();
             log.info("IMPRIMIENDO EN LOG LA PAGINA PARA CONOCER LOS ELEMENTOS DISPONIBLES");
-            log.info(driver.getPageSource());
+            log.info(driverInProgress.getPageSource());
         });
 
 
