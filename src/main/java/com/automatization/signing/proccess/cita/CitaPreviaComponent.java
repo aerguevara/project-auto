@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.MessageFormat;
@@ -52,13 +53,13 @@ public class CitaPreviaComponent {
         this.botService = botService;
         this.counterRepository = counterRepository;
         this.driverOriginal = builderDriver();
-        // this.remoteDriver = builderRemoteDriver();
+        this.remoteDriver = builderRemoteDriver();
     }
 
     private static WebDriver builderRemoteDriver() {
         URL url = null;
         try {
-            url = new URL("http://192.168.1.145:4444/wd/hub");
+            url = new URL("http://localhost:4444/wd/hub");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -85,10 +86,17 @@ public class CitaPreviaComponent {
                         .map(this::compareMilisecondSleep)
                         .orElse(true);
         if (entry) {
-            findDateByWebDriver(driverOriginal);
+            findDateByWebDriver(remoteDriver);
         } else {
+            try {
+                Runtime.getRuntime().exec("stop");
+                Runtime.getRuntime().exec("rm");
+                Runtime.getRuntime().exec("run");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             log.info("SLEEP POR BLOQUEO, USAMOS EL DRIVER REMOTO PARA BURLAR EL BLOQUEO");
-            // findDateByWebDriver(remoteDriver);
+            findDateByWebDriver(remoteDriver);
         }
 
 
