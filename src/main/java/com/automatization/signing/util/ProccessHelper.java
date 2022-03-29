@@ -36,7 +36,7 @@ public final class ProccessHelper {
 
     public static void pensarUnPoco() {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException pepiotoerror) {
             log.error("ERROR AL PENSAR EN LA INMORTALIDAD DEL CANGREJO :c", pepiotoerror);
         }

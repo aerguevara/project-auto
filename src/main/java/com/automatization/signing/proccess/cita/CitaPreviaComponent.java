@@ -12,6 +12,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.UnreachableBrowserException;
 import org.openqa.selenium.support.ui.Select;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -52,21 +53,26 @@ public class CitaPreviaComponent {
         this.personProperties = personProperties;
         this.botService = botService;
         this.counterRepository = counterRepository;
-        this.driverOriginal = builderDriver();
+        //this.driverOriginal = builderDriver();
         this.remoteDriver = builderRemoteDriver();
     }
 
     private static WebDriver builderRemoteDriver() {
         URL url = null;
         try {
-            url = new URL("http://localhost:4444/wd/hub");
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
+            url = new URL("http://AREYES-PC:4444/wd/hub");
+            ChromeOptions options = new ChromeOptions();
+            WebDriver remoteWebDriver = new RemoteWebDriver(url, options);
+            remoteWebDriver.manage().window().setSize(new Dimension(1440, 900));
+            return remoteWebDriver;
+        } catch (MalformedURLException | UnreachableBrowserException e) {
+            try {
+                Runtime.getRuntime().exec("docker start remote_1");
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+            return builderRemoteDriver();
         }
-        ChromeOptions options = new ChromeOptions();
-        WebDriver remoteWebDriver = new RemoteWebDriver(url, options);
-        remoteWebDriver.manage().window().setSize(new Dimension(1440, 900));
-        return remoteWebDriver;
     }
 
     private static WebDriver builderDriver() {
@@ -85,19 +91,24 @@ public class CitaPreviaComponent {
                         .max(LocalDateTime::compareTo)
                         .map(this::compareMilisecondSleep)
                         .orElse(true);
-        if (entry) {
-            findDateByWebDriver(remoteDriver);
-        } else {
+        if (!entry) {
             try {
-                Runtime.getRuntime().exec("stop");
-                Runtime.getRuntime().exec("rm");
-                Runtime.getRuntime().exec("run");
+                remoteDriver.close();
+                remoteDriver = null;
+                log.info("PARANDO EL CONTENEDOR");
+                Runtime.getRuntime().exec("docker stop remote_1");
+                log.info("ELIMINADO EL CONTENEDOR");
+                Runtime.getRuntime().exec("docker rm remote_1");
+                log.info("INICIANDO EL NUEVO CONTENEDOR");
+                Runtime.getRuntime().exec("docker run --name remote_1 -d -p 4444:4444 --shm-size=2g selenium/standalone-chrome:4.1.2-20220317");
+                ProccessHelper.pensarUnPoco();
+                log.info("CREANDO NUEVA CONEXION AL CONTENEDOR");
+                remoteDriver = builderRemoteDriver();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            log.info("SLEEP POR BLOQUEO, USAMOS EL DRIVER REMOTO PARA BURLAR EL BLOQUEO");
-            findDateByWebDriver(remoteDriver);
         }
+        findDateByWebDriver(remoteDriver);
 
 
     }

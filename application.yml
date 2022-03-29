@@ -3,7 +3,7 @@ spring:
     mongodb:
       user: devuser
       password: pass1234
-      uri: mongodb://192.168.1.145:27017/develop
+      uri: mongodb://AREYES-PC:27017/develop
 logging:
   file:
     name: auto.log
