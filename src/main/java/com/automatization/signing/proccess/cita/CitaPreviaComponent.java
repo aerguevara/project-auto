@@ -127,10 +127,11 @@ public class CitaPreviaComponent {
     }
 
     private Counter getCounter() {
-        return counterRepository.findByCreated(LocalDate.now())
+        return counterRepository.findByActiveIsTrue()
                 .orElseGet(() ->
                         Counter.builder()
                                 .created(LocalDate.now())
+                                .active(true)
                                 .fail(0)
                                 .success(0)
                                 .successDate(new ArrayList<>())
@@ -237,6 +238,8 @@ public class CitaPreviaComponent {
                         counter.getSuccess(),
                         counter.getFail()
                 ));
+        counter.setActive(false);
+        counterRepository.save(counter);
     }
 
 

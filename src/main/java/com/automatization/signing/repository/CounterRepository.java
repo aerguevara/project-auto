@@ -11,4 +11,6 @@ import java.util.Optional;
 public interface CounterRepository extends MongoRepository<Counter, String> {
 
     Optional<Counter> findByCreated(LocalDate localDate);
+
+    Optional<Counter> findByActiveIsTrue();
 }
