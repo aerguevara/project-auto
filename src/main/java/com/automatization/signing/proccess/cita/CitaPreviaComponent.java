@@ -53,21 +53,24 @@ public class CitaPreviaComponent {
         this.personProperties = personProperties;
         this.botService = botService;
         this.counterRepository = counterRepository;
-        //this.driverOriginal = builderDriver();
+        this.driverOriginal = builderDriver();
         this.remoteDriver = builderRemoteDriver();
     }
 
     private static WebDriver builderRemoteDriver() {
         URL url = null;
         try {
-            url = new URL("http://AREYES-PC:4444/wd/hub");
+            url = new URL("http://localhost:4444/wd/hub");
             ChromeOptions options = new ChromeOptions();
+            options.addArguments("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36");
             WebDriver remoteWebDriver = new RemoteWebDriver(url, options);
             remoteWebDriver.manage().window().setSize(new Dimension(1440, 900));
             return remoteWebDriver;
         } catch (MalformedURLException | UnreachableBrowserException e) {
             try {
+                log.info("Ucurrio un error al iniciar la conexion al webdriver");
                 Runtime.getRuntime().exec("docker start remote_1");
+                ProccessHelper.pensarUnPoco();
             } catch (IOException ioException) {
                 ioException.printStackTrace();
             }
@@ -91,29 +94,29 @@ public class CitaPreviaComponent {
                         .max(LocalDateTime::compareTo)
                         .map(this::compareMilisecondSleep)
                         .orElse(true);
-        if (!entry) {
-            try {
-                remoteDriver.close();
-                remoteDriver = null;
-                log.info("PARANDO EL CONTENEDOR");
-                Runtime.getRuntime().exec("docker stop remote_1");
-                log.info("ELIMINADO EL CONTENEDOR");
-                Runtime.getRuntime().exec("docker rm remote_1");
-                log.info("INICIANDO EL NUEVO CONTENEDOR");
-                Runtime.getRuntime().exec("docker run --name remote_1 -d -p 4444:4444 --shm-size=2g selenium/standalone-chrome:4.1.2-20220317");
-                ProccessHelper.pensarUnPoco();
-                log.info("CREANDO NUEVA CONEXION AL CONTENEDOR");
-                remoteDriver = builderRemoteDriver();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        if (entry) {
+            closeRemote();
+            log.info("USANDO EL DRIVER ORIGINAL");
+            findDateByWebDriver(driverOriginal, true);
+        } else {
+            log.info("SLEEP POR BLOQUEO EL ORIGINAL - USAMOS EL REMOTO MIENTRAS");
+            findDateByWebDriver(remoteDriver, false);
         }
-        findDateByWebDriver(remoteDriver);
 
 
     }
 
-    private void findDateByWebDriver(WebDriver localDriver) {
+    private void closeRemote() {
+        try {
+            remoteDriver.close();
+            remoteDriver.quit();
+        } catch (WebDriverException e) {
+            log.info("OCURRIO UN ERROR AL CERRAR LA SESION {}", e.getMessage());
+        }
+
+    }
+
+    private void findDateByWebDriver(WebDriver localDriver, boolean isLocal) {
         log.info("*****************************INICIAMOS EL PROCESO DE BUSQUEDA DE CITA*****************************");
         personProperties.getData()
                 .stream()
@@ -127,12 +130,13 @@ public class CitaPreviaComponent {
                         stepThree(localDriver);
                         stepFour(localDriver);
                     } catch (NoSuchElementException | ElementClickInterceptedException | AutoException e) {
-                        log.error("MENSAJE DE ERROR ", e);
+                        log.info("MENSAJE DE ERROR {} ", e.getMessage());
                         Counter counter = getCounter();
                         counter.setLastModify(LocalDateTime.now());
                         counter.setFail(counter.getFail() + 1);
-                        if (localDriver.getPageSource().contains("ERROR [500]")) {
+                        if (localDriver.getPageSource().contains("ERROR [500]") && isLocal) {
                             counter.getBlockFail().add(LocalDateTime.now());
+                            remoteDriver = builderRemoteDriver();
                         }
                         counterRepository.save(counter);
                     }
